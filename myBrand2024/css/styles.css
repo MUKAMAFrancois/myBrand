@@ -1,0 +1,670 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* html{
+    scroll-behavior: smooth;
+} */
+
+
+/* -------------------Home----------------------------- */
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/portifo_mukama.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.container-overlay{
+    font-family: 'Inknut Antiqua', serif;
+    padding:20px 5%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav h1{
+width: fit-content;
+}
+
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin:10px 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background-color:#DB0C0C;
+    position: absolute;
+    left:0;
+    bottom:0;
+    transition: 0.6s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav h2 span{
+    color:#DB0C0C;
+}
+
+.signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
+    color: white;
+    background: #DB0C0C;
+    text-decoration: none;
+    padding: 3px 20px;
+    border-radius: 30px;
+    border:none;
+    transition: transform 0.6s;
+}
+.signIn-link a,.more-on-me-link a,.hire-me-btn a,.more-skills-link a,.see-more-portifo a{
+    color:#fff;
+    font-family: 'Inknut Antiqua', serif;
+    text-decoration: none;
+    transition: color 0.2s;
+  
+}
+
+.signIn-link:hover,.more-on-me-link:hover,.hire-me-btn:hover,.more-skills-link:hover,.see-more-portifo:hover{
+    background: #fff;
+    transform: scale(1.07);
+}
+
+.signIn-link a:hover,.more-on-me-link a:hover,.hire-me-btn a:hover,.more-skills-link a:hover,.see-more-portifo a:hover{
+    color:#DB0C0C;
+}
+
+.container-overlay .home-details{
+   margin-top:150px;
+}
+
+.home-details .my-name{
+    margin:50px auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.my-name span{
+    font-size: 32px;
+    font-weight: 700;
+}
+.home-details{
+    font-size: 24px;
+}
+
+.home-details .intro-career{
+    width: 90%;
+    margin-bottom: 80px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.intro-career span{
+    color:#DB0C0C;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* ------------------------------About me-------------------- */
+
+
+#about-me{
+    background-color: #C4BCB9;
+    padding:50px 5%;
+}
+
+.container-about-me .row{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.container-about-me h1, .container-my-skills h1,.container-portifo h1, .blogs-container h1,.contact-container h1{
+    font-size: 28px;
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.container-about-me h1 hr, .container-my-skills h1 hr,.container-portifo h1 hr, .blogs-container h1 hr,.contact-container h1 hr{
+    width: 40px;
+    background-color:#DB0C0C;
+    height: 12px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.container-about-me h1 span,.container-my-skills h1 span,.container-portifo h1 span, .blogs-container h1 span,.contact-container h1 span{    
+    color: #DB0C0C;
+    font-size: 38px;
+    font-weight: bolder;
+}
+.row .col-left{
+    flex-basis: 35%;
+}
+
+.row .col-left img{
+    width: 100%;
+    height: auto;
+}
+.row .col-right{
+    flex-basis: 60%;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hire-getCV{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+.get-cv-btn{
+    background-color: #fff;
+    color: #DB0C0C;
+    padding: 3px 20px;
+    border-radius: 30px;
+    border:none;
+    transition: transform 0.6s;
+}
+
+.get-cv-btn a{
+    color: #DB0C0C;
+    text-decoration: none;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+
+
+.get-cv-btn:hover{
+    background: #DB0C0C;
+    transform: scale(1.03);
+
+}
+
+.get-cv-btn a:hover{
+    color:#fff;
+}
+
+
+/* ----------------------------Skills--------------------- */
+.container-my-skills{
+    width:80%;
+}
+#my-skills{
+    padding:50px 5%;
+    background-color: #C4BCB9;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    border:2px solid #000;
+    position: relative;
+}
+
+.progress-bar .progress{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    background-color: #DB0C0C;
+    border-radius: 30px;
+}
+
+.progress span{
+    color:white;
+    font-size:14px;
+    position: absolute;
+    right: 10px;
+
+}
+
+.single-skill p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left:20px;
+}
+
+.more-skills-link{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* --------------------Portifolio-------------- */
+
+
+
+#my-portifolio{
+    padding:50px 5%;
+    background-color: #C4BCB9;
+}
+
+.grommet-icons--link-next {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='2' d='M2 12h20m-9-9l9 9l-9 9'/%3E%3C/svg%3E");
+  }
+
+  .material-symbols--share {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M18 22q-1.25 0-2.125-.875T15 19q0-.175.025-.363t.075-.337l-7.05-4.1q-.425.375-.95.588T6 15q-1.25 0-2.125-.875T3 12q0-1.25.875-2.125T6 9q.575 0 1.1.213t.95.587l7.05-4.1q-.05-.15-.075-.337T15 5q0-1.25.875-2.125T18 2q1.25 0 2.125.875T21 5q0 1.25-.875 2.125T18 8q-.575 0-1.1-.212t-.95-.588L8.9 11.3q.05.15.075.338T9 12q0 .175-.025.363T8.9 12.7l7.05 4.1q.425-.375.95-.587T18 16q1.25 0 2.125.875T21 19q0 1.25-.875 2.125T18 22'/%3E%3C/svg%3E");
+  }
+
+.portifo-list{
+   display: grid;
+   grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+   /* grid-template-columns: 1fr 1fr; */
+   gap:30px;
+}
+.portifo-list .single-portifo{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.6s;
+
+}
+
+.single-portifo:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.single-portifo img{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.portifo-links ul{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.portifo-links ul li a{
+    color:#000;
+    font-weight: bold;
+}
+.single-portifo .layer{
+    position: absolute;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0 20px;
+    border-radius: 10px;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.5),#DB0C0C);
+    /* background: #DB0C0C; */
+    transition: height 0.9s ease-in-out;
+}
+
+.layer .share-next{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.layer h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    padding-top:20px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.layer p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align-items: center;
+
+}
+
+.share-next button{
+    margin: 80px 160px;
+    padding:4px 20px;
+    background-color: #DB0C0C;
+    border:#fff solid 1px;
+    border-radius: 10px;
+    transition:transform 0.4s;
+}
+.share-next button:hover{
+    transform:translateY(-2px);
+    transform: scale(1.03);
+}
+
+.single-portifo:hover .layer{
+    height: 100%;
+}
+
+
+.see-more-portifo{
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* =====================Blogs==================== */
+
+#my-blogs{
+    padding:50px 5%;
+    background-color: #C4BCB9;
+}
+
+
+.blog-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap:30px;
+}
+.single-blog{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.6s;
+}
+.single-blog:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.single-blog img{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.single-blog .blog-details{
+    padding:3px 12px;
+}
+.blog-details h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin:20px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.blog-details p{
+    font-size: 18px;
+    font-weight: 400;
+    margin:20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    align-items: center;
+
+}
+
+.blog-details p a{
+    color:#DB0C0C;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+
+}
+.blog-details a:hover{
+    border-bottom: 2px solid #DB0C0C;
+}
+.comments-datePublish{
+    display: flex;
+    justify-content: space-between;
+    margin:20px;
+}
+
+.fa-solid{
+    color:#DB0C0C;
+    margin-right: 8px;
+}
+
+/* ================Contact================= */
+
+#contact{
+    padding:50px 5%;
+    background: #C4BCB9;
+}
+
+.contact-details p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: 'Inknut Antiqua', sans-serif;
+    text-align: justify;
+    align-items: center;
+
+
+}
+form input,form textarea{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border:1px solid #DB0C0C;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+}
+
+.send-message-btn{
+    color: #fff;
+    background-color: #DB0C0C;
+    padding: 3px 12px;
+    font-family: 'Inknut Antiqua', sans-serif;
+    border-radius: 30px;
+    border:none;
+    font-weight: bolder;
+    transition: transform 0.6s;
+}
+
+.send-message-btn:hover{
+    background: #fff;
+    transform: scale(1.03);
+    color:#DB0C0C;
+}
+
+
+/* =======================Footer========================= */
+
+#footer{
+    padding-top:50px;
+    padding-bottom: 20px;
+    background: #333;
+    color:white;
+    font-family: 'Inknut Antiqua', sans-serif;
+    
+}
+.footer-container{
+    font-family: 'Inknut Antiqa', sans-serif;
+    display:flex;
+    justify-content: space-between;
+
+}
+.who-I-am{
+    font-family: 'Inknut Antiqa', sans-serif;
+    flex-basis:35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 12px;
+}
+.who-I-am h3{
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+
+}
+.who-I-am p{
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: justify;
+    align-items: center;
+
+
+}
+
+.quick-links{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.quick-links h3{
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+.quick-links a{
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-size: 12px;
+}
+.bottom-quick-links li{
+    margin:0;
+    display: block;
+}
+.subscribe-myProjects{
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.subscribe-myProjects h3{
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+.subscribe-myProjects input{
+    width: 90%;
+    padding:12px 10px;
+    border:1px solid #DB0C0C;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    margin-top:12px;
+}
+
+.subscribe-button{
+    width: 90%;
+    color: #fff;
+    background-color: #DB0C0C;
+    padding: 3px 12px;
+    font-family: 'Inknut Antiqua', sans-serif;
+    border-radius: 30px;
+    border:none;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    transition: transform 0.6s;
+}
+
+.subscribe-button:hover{
+    background: #fff;
+    transform: scale(1.03);
+    color:#DB0C0C;
+}
+.fa-brands{
+    color:#F24E1E;
+    margin-bottom: 20px;
+}
+.my-google-map,.my-phone,.my-email{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Inknut Antiqua', sans-serif;
+    cursor: pointer;
+    margin-top:20px;
+}
+.my-google-map img{
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+}
+.social-icons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+.social-icons i{
+    font-size: 20px;
+    margin: 0 10px;
+    transition: transform 0.6s;
+}
+.social-icons i:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.copy-right{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Inknut Antiqua', sans-serif;
+    margin-top: 20px;
+    color:#DB0C0C;
+}
