@@ -33,6 +33,8 @@
     background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 0;
+    bottom: 0;
+    right: 0;
     left: 0;
     color:white;
 }
@@ -95,6 +97,7 @@ nav h2 span{
     font-family: 'Inknut Antiqua', serif;
     text-decoration: none;
     transition: color 0.2s;
+    display: block;
   
 }
 
@@ -133,7 +136,7 @@ nav h2 span{
 
 .intro-career span{
     color:#DB0C0C;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
 }
 
@@ -202,12 +205,14 @@ nav h2 span{
     border-radius: 30px;
     border:none;
     transition: transform 0.6s;
+   
 }
 
 .get-cv-btn a{
     color: #DB0C0C;
     text-decoration: none;
     font-family: 'Inknut Antiqua', serif;
+    display: block;
 }
 
 
@@ -410,7 +415,7 @@ nav h2 span{
 .blog-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-    gap:30px;
+    gap:50px;
 }
 .single-blog{
     position: relative;
@@ -439,6 +444,9 @@ nav h2 span{
     margin:20px;
     font-family: 'Roboto', sans-serif;
 
+}
+.blog-details h3:hover{
+    color:#DB0C0C;
 }
 
 .blog-details p{
@@ -618,7 +626,7 @@ form input,form textarea{
     border-radius: 30px;
     border:none;
     font-weight: bolder;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     transition: transform 0.6s;
 }
 
@@ -668,3 +676,338 @@ form input,form textarea{
     margin-top: 20px;
     color:#DB0C0C;
 }
+
+
+/* -=====================Responsiveness============= */
+
+nav .fa-regular, nav .fa-solid{
+    display: none;
+}
+nav .fa-solid{
+    color:white;
+    cursor: pointer;
+}
+@media(max-width: 690px){
+
+    nav .fa-regular, nav .fa-solid{
+        display: block;
+        font-size: 24px;
+    }
+
+    .container-overlay nav ul{
+        background: #333;
+        position: fixed;
+        top:0;
+       /*  right: 0; */ /* we will need to make it -220px to hide it and show it by clicking */
+       right: -220px;
+        width: 220px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 20;
+        transition: right 0.8s;
+    }
+    .container-overlay nav ul button{
+        margin-left: 20px;
+    }
+
+   .container-overlay nav ul li{
+        margin:24px;
+        display: block;
+    }
+    .container-overlay nav ul .fa-regular{
+        position: absolute;
+        top:30px;
+        left:25px;
+        cursor: pointer;
+    }
+
+    .container-overlay{
+        padding:20px 5%;
+        height: auto;
+    }
+
+   
+    nav ul li{
+        margin:10px 10px;
+    }
+  
+    .home-details .my-name{
+        margin:20px auto;
+    }
+    .my-name span{
+        font-size: 24px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    .home-details{
+        font-size: 18px;
+        margin-top:40px;
+    }
+    .home-details .intro-career{
+        margin-bottom: 40px;
+    }
+    .intro-career span{
+        white-space: nowrap;
+    }
+    .more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
+        padding: 3px 10px;
+    }
+    .more-on-me-link span{
+        font-size: 18px;
+    }
+    #about-me,#my-skills,#my-portifolio,#my-blogs,#contact{
+        padding:30px 5%;
+    }
+
+    .container-about-me h1, .container-my-skills h1,.container-portifo h1, .blogs-container h1,.contact-container h1{
+        font-size: 18px;
+        margin:30px 0;;
+    }
+
+    .container-about-me h1 hr, .container-my-skills h1 hr,.container-portifo h1 hr, .blogs-container h1 hr,.contact-container h1 hr{
+        width: 30px;
+        height: 6px;
+    }
+
+    .container-about-me h1 span,.container-my-skills h1 span,.container-portifo h1 span, .blogs-container h1 span,.contact-container h1 span{    
+        font-size: 20px;
+    }
+    .container-about-me .row{
+        flex-direction: column;
+    }
+
+    .col-left img{
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .col-right p{
+        font-size: 18px;
+    }
+    .row .col-left{
+        flex-basis: 90%;
+    }
+    .row .col-right{
+        flex-basis: 90%;
+    }
+    .hire-getCV{
+        flex-direction: column;
+    }
+    .hire-getCV button{
+        margin-bottom: 20px;
+    }
+    .get-cv-btn{
+        margin-bottom: 20px;
+    }
+    .container-my-skills{
+        width:90%;
+        margin: 0 auto;
+    }
+    .progress-bar{
+        width: 100%;
+        border: 2px solid #0473b3;
+    }
+    .single-skill p{
+        font-size: 16px;
+    }
+
+
+/* ------------------- */
+
+    .portifo-list{
+        grid-template-columns: 1fr;
+        margin: 0 30px;
+    }
+    .single-portifo img{
+        height: 350px;
+    }
+    .portifo-links ul{
+        margin-bottom: 20px;
+    }
+    .layer h3{
+        font-size: 20px;
+    }
+    .layer p{
+        font-size: 16px;
+    }
+    .share-next button{
+        margin: 40px 100px;
+    }
+
+
+/* ====================================== */
+
+    .blog-list{
+        grid-template-columns: 1fr;
+    }
+    .single-blog .blog-details{
+        padding:3px 10px;
+    }
+    .single-blog{
+        margin: 0 30px;
+    }
+
+    .single-blog img{
+        height: 350px;
+    }
+    .blog-details h3{
+        font-size: 20px;
+    }
+    .blog-details p{
+        font-size: 16px;
+    }
+    .comments-datePublish{
+        margin:10px;
+    }
+    .contact-details p{
+        font-size: 16px;
+    }
+    form input,form textarea{
+        width: 100%;
+    }
+
+    /* ===============footer========== */
+    .footer-container{
+        flex-direction: column;
+        width:90%;
+        padding-left:20px;
+    }
+    .who-I-am,.quick-links,.subscribe-myProjects{
+        flex-basis: 100%;
+    }
+    .subscribe-myProjects input{
+        width: 100%;
+    }
+    .subscribe-button{
+        width:30%;
+    }
+    .social-icons{
+        margin-bottom: 20px;
+    }
+    .social-icons i{
+        font-size: 24px;
+    }
+    .copy-right{
+        margin-top: 10px;
+    }
+}
+
+
+
+@media(max-width: 500px){
+
+
+    nav .fa-regular, nav .fa-solid{
+        display: block;
+        font-size: 24px;
+    }
+
+    .container-overlay nav ul{
+        background: #333;
+        position: fixed;
+        top:0;
+       /*  right: 0; */ /* we will need to make it -220px to hide it and show it by clicking */
+       right: -220px;
+        width: 220px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 20;
+        transition: right 0.8s;
+    }
+    .container-overlay nav ul button{
+        margin-left: 20px;
+    }
+
+   .container-overlay nav ul li{
+        margin:24px;
+        display: block;
+    }
+    .container-overlay nav ul .fa-regular{
+        position: absolute;
+        top:30px;
+        left:25px;
+        cursor: pointer;
+    }
+
+
+
+    .container-overlay{
+        padding:20px 5%;
+        height: auto;
+    }
+
+   
+    nav ul li{
+        margin:10px 10px;
+    }
+  
+    .home-details .my-name{
+        margin:20px auto;
+    }
+    .my-name span{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .home-details{
+        font-size: 18px;
+        margin-top:40px;
+    }
+    .home-details .intro-career{
+        margin-bottom: 40px;
+    }
+    .more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
+        padding: 3px 10px;
+    }
+    .more-on-me-link span{
+        font-size: 18px;
+    }
+    #about-me,#my-skills,#my-portifolio,#my-blogs,#contact{
+        padding:30px 5%;
+    }
+
+    .container-about-me h1, .container-my-skills h1,.container-portifo h1, .blogs-container h1,.contact-container h1{
+        font-size: 18px;
+        margin:30px 0;;
+    }
+
+    .container-about-me h1 hr, .container-my-skills h1 hr,.container-portifo h1 hr, .blogs-container h1 hr,.contact-container h1 hr{
+        width: 30px;
+        height: 6px;
+    }
+
+    .container-about-me h1 span,.container-my-skills h1 span,.container-portifo h1 span, .blogs-container h1 span,.contact-container h1 span{    
+        font-size: 20px;
+    }
+    .container-about-me .row{
+        flex-direction: column;
+    }
+
+    .col-left img{
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .col-right p{
+        font-size: 18px;
+    }
+    .row .col-left{
+        flex-basis: 90%;
+    }
+    .row .col-right{
+        flex-basis: 90%;
+    }
+    .hire-getCV{
+        flex-direction: column;
+    }
+    .hire-getCV button{
+        margin-bottom: 20px;
+    }
+    .get-cv-btn{
+        margin-bottom: 20px;
+    }
+    .container-my-skills{
+        width:90%;
+        margin: 0 auto;
+    }
+}
+
