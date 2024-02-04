@@ -30,7 +30,7 @@
     padding:20px 5%;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -39,11 +39,19 @@
     color:white;
 }
 
-nav{
+.top-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background: #333;
+    position: fixed;
+    left: 0;
+    top:0;
+    right: 0;
+    padding: 0 5%;
+    z-index: 100;
+    
 }
 
 nav h1{
@@ -68,7 +76,7 @@ nav ul li a::after{
     content:'';
     width: 0;
     height: 3px;
-    background-color:#DB0C0C;
+    background-color:#bcfd4c;
     position: absolute;
     left:0;
     bottom:0;
@@ -80,12 +88,12 @@ nav ul li a:hover::after{
 }
 
 nav h2 span{
-    color:#DB0C0C;
+    color:#bcfd4c;
 }
 
 .signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
-    color: white;
-    background: #DB0C0C;
+    color: #000;
+    background: #bcfd4c;
     text-decoration: none;
     padding: 3px 20px;
     border-radius: 30px;
@@ -93,7 +101,7 @@ nav h2 span{
     transition: transform 0.6s;
 }
 .signIn-link a,.more-on-me-link a,.hire-me-btn a,.more-skills-link a,.see-more-portifo a{
-    color:#fff;
+    color: #000;
     font-family: 'Inknut Antiqua', serif;
     text-decoration: none;
     transition: color 0.2s;
@@ -103,11 +111,12 @@ nav h2 span{
 
 .signIn-link:hover,.more-on-me-link:hover,.hire-me-btn:hover,.more-skills-link:hover,.see-more-portifo:hover{
     background: #fff;
+    color: #000;
     transform: scale(1.07);
 }
 
 .signIn-link a:hover,.more-on-me-link a:hover,.hire-me-btn a:hover,.more-skills-link a:hover,.see-more-portifo a:hover{
-    color:#DB0C0C;
+    color: #000;
 }
 
 .container-overlay .home-details{
@@ -135,7 +144,7 @@ nav h2 span{
 }
 
 .intro-career span{
-    color:#DB0C0C;
+    color:#bcfd4c;
     font-size: 36px;
     font-weight: 700;
 }
@@ -145,7 +154,7 @@ nav h2 span{
 
 
 #about-me{
-    background-color: #C4BCB9;
+    background-color: #6e6e6e;
     padding:50px 5%;
 }
 
@@ -165,14 +174,14 @@ nav h2 span{
 
 .container-about-me h1 hr, .container-my-skills h1 hr,.container-portifo h1 hr, .blogs-container h1 hr,.contact-container h1 hr{
     width: 40px;
-    background-color:#DB0C0C;
+    background-color:#bcfd4c;
     height: 12px;
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 .container-about-me h1 span,.container-my-skills h1 span,.container-portifo h1 span, .blogs-container h1 span,.contact-container h1 span{    
-    color: #DB0C0C;
+    color: #bcfd4c;
     font-size: 38px;
     font-weight: bolder;
 }
@@ -200,7 +209,7 @@ nav h2 span{
 
 .get-cv-btn{
     background-color: #fff;
-    color: #DB0C0C;
+    color: #000;
     padding: 3px 20px;
     border-radius: 30px;
     border:none;
@@ -209,7 +218,7 @@ nav h2 span{
 }
 
 .get-cv-btn a{
-    color: #DB0C0C;
+    color: #000;
     text-decoration: none;
     font-family: 'Inknut Antiqua', serif;
     display: block;
@@ -218,13 +227,13 @@ nav h2 span{
 
 
 .get-cv-btn:hover{
-    background: #DB0C0C;
+    background: #bcfd4c;
     transform: scale(1.03);
 
 }
 
 .get-cv-btn a:hover{
-    color:#fff;
+    color:#000;
 }
 
 
@@ -234,7 +243,7 @@ nav h2 span{
 }
 #my-skills{
     padding:50px 5%;
-    background-color: #C4BCB9;
+    background-color: #6e6e6e;
 }
 
 .progress-bar{
@@ -252,15 +261,16 @@ nav h2 span{
     top:0;
     left:0;
     height: 100%;
-    background-color: #DB0C0C;
+    background-color: #bcfd4c;
     border-radius: 30px;
 }
 
 .progress span{
-    color:white;
+    color:#000;
     font-size:14px;
     position: absolute;
     right: 10px;
+    font-weight: 700;
 
 }
 
@@ -283,7 +293,7 @@ nav h2 span{
 
 #my-portifolio{
     padding:50px 5%;
-    background-color: #C4BCB9;
+    background-color: #6e6e6e;
 }
 
 .grommet-icons--link-next {
@@ -334,10 +344,13 @@ nav h2 span{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    position: relative;
+    z-index: 10;
 }
 .portifo-links ul li a{
-    color:#000;
+    color:#fff;
     font-weight: bold;
+    font-size: 24px;
 }
 .single-portifo .layer{
     position: absolute;
@@ -351,8 +364,8 @@ nav h2 span{
     left:0;
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.5),#DB0C0C);
-    /* background: #DB0C0C; */
+    background: linear-gradient(rgba(0,0,0,0.5),#bcfd4c);
+    /* background: #bcfd4c; */
     transition: height 0.9s ease-in-out;
 }
 
@@ -384,7 +397,7 @@ nav h2 span{
 .share-next button{
     margin: 80px 160px;
     padding:4px 20px;
-    background-color: #DB0C0C;
+    background-color: #bcfd4c;
     border:#fff solid 1px;
     border-radius: 10px;
     transition:transform 0.4s;
@@ -408,7 +421,7 @@ nav h2 span{
 
 #my-blogs{
     padding:50px 5%;
-    background-color: #C4BCB9;
+    background-color: #6e6e6e;
 }
 
 
@@ -446,7 +459,7 @@ nav h2 span{
 
 }
 .blog-details h3:hover{
-    color:#DB0C0C;
+    color:#bcfd4c;
 }
 
 .blog-details p{
@@ -460,14 +473,14 @@ nav h2 span{
 }
 
 .blog-details p a{
-    color:#DB0C0C;
+    color:#bcfd4c;
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
 
 }
 .blog-details a:hover{
-    border-bottom: 2px solid #DB0C0C;
+    border-bottom: 2px solid #bcfd4c;
 }
 .comments-datePublish{
     display: flex;
@@ -476,7 +489,7 @@ nav h2 span{
 }
 
 .fa-solid{
-    color:#DB0C0C;
+    color:#bcfd4c;
     margin-right: 8px;
 }
 
@@ -484,7 +497,7 @@ nav h2 span{
 
 #contact{
     padding:50px 5%;
-    background: #C4BCB9;
+    background: #6e6e6e;
 }
 
 .contact-details p{
@@ -502,7 +515,7 @@ form input,form textarea{
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
-    border:1px solid #DB0C0C;
+    border:1px solid #bcfd4c;
     outline: none;
     font-size: 18px;
     font-weight: 400;
@@ -511,8 +524,8 @@ form input,form textarea{
 }
 
 .send-message-btn{
-    color: #fff;
-    background-color: #DB0C0C;
+    color: #000;
+    background-color: #bcfd4c;
     padding: 3px 12px;
     font-family: 'Inknut Antiqua', sans-serif;
     border-radius: 30px;
@@ -524,7 +537,7 @@ form input,form textarea{
 .send-message-btn:hover{
     background: #fff;
     transform: scale(1.03);
-    color:#DB0C0C;
+    color:#000;
 }
 
 
@@ -611,7 +624,7 @@ form input,form textarea{
 .subscribe-myProjects input{
     width: 90%;
     padding:12px 10px;
-    border:1px solid #DB0C0C;
+    border:1px solid #bcfd4c;
     border-radius: 10px;
     margin-bottom: 16px;
     margin-top:12px;
@@ -619,8 +632,8 @@ form input,form textarea{
 
 .subscribe-button{
     width: 90%;
-    color: #fff;
-    background-color: #DB0C0C;
+    color: #000;
+    background-color: #bcfd4c;
     padding: 3px 12px;
     font-family: 'Inknut Antiqua', sans-serif;
     border-radius: 30px;
@@ -633,7 +646,7 @@ form input,form textarea{
 .subscribe-button:hover{
     background: #fff;
     transform: scale(1.03);
-    color:#DB0C0C;
+    color:#000;
 }
 .fa-brands{
     color:#F24E1E;
@@ -674,7 +687,7 @@ form input,form textarea{
     font-size: 12px;
     font-family: 'Inknut Antiqua', sans-serif;
     margin-top: 20px;
-    color:#DB0C0C;
+    color:#bcfd4c;
 }
 
 

@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #C4BCB9;
+    background: #6e6e6e;
 }
 .login-container{
     /* width: 100%; */
@@ -23,13 +23,13 @@ body{
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: 2px solid #db0c0c;
+    border: 2px solid #bcfd4c;
 }
 .login-container h1{
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 30px;
-    color: #db0c0c;
+    color: #000;
     text-align: center;
 }
 
@@ -48,7 +48,7 @@ body{
 
 
 input:focus::placeholder {
-    color: #db0c0c;  
+    color: #fe4e1e;  
     transform: translateY(-10px);  
   }
 
@@ -82,7 +82,7 @@ form input{
     transition: transform 0.5s;
 }
 .forgot-password-link:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .login-button{
@@ -91,8 +91,8 @@ form input{
     border: none;
     outline: none;
     font-size: 18px;
-    color: #fff;
-    background: #db0c0c;
+    color: #000;
+    background: #bcfd4c;
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 20px;
@@ -101,8 +101,8 @@ form input{
 
 .login-button:hover{
     background: #fff;
-    color:#db0c0c;
-    border: 2px solid #db0c0c;
+    color:#000;
+    border: 2px solid #bcfd4c;
 }
 
 .or{
