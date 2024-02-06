@@ -119,9 +119,8 @@ nav h2 span{
     color: #000;
 }
 
-.container-overlay .home-details{
-   margin-top:150px;
-}
+
+
 
 .home-details .my-name{
     margin:50px auto;
@@ -134,19 +133,20 @@ nav h2 span{
     font-weight: 700;
 }
 .home-details{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .home-details .intro-career{
-    width: 90%;
+    width: 95%;
     margin-bottom: 80px;
     font-family: 'Roboto', sans-serif;
 }
 
 .intro-career span{
     color:#bcfd4c;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 
@@ -364,7 +364,7 @@ nav h2 span{
     left:0;
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.5),#bcfd4c);
+    background: linear-gradient(rgba(0,0,0,0.7),#bcfd4c);
     /* background: #bcfd4c; */
     transition: height 0.9s ease-in-out;
 }
@@ -700,7 +700,7 @@ nav .fa-solid{
     color:white;
     cursor: pointer;
 }
-@media(max-width: 690px){
+@media only screen and (max-width: 600px){
 
     nav .fa-regular, nav .fa-solid{
         display: block;
@@ -735,7 +735,7 @@ nav .fa-solid{
     }
 
     .container-overlay{
-        padding:20px 5%;
+        padding:20px;
         height: auto;
     }
 
@@ -743,25 +743,24 @@ nav .fa-solid{
     nav ul li{
         margin:10px 10px;
     }
-  
+    .home-details{
+        position: absolute;
+        bottom:150px;
+    }
     .home-details .my-name{
         margin:20px auto;
     }
     .my-name span{
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 500;
         white-space: nowrap;
-    }
-    .home-details{
-        font-size: 18px;
-        margin-top:40px;
     }
     .home-details .intro-career{
         margin-bottom: 40px;
     }
-    .intro-career span{
-        white-space: nowrap;
-    }
+   .intro-career span{
+    font-size: 24px;
+   }
     .more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
         padding: 3px 10px;
     }
@@ -805,12 +804,13 @@ nav .fa-solid{
     }
     .hire-getCV{
         flex-direction: column;
+        width: 95%;
     }
     .hire-getCV button{
         margin-bottom: 20px;
     }
     .get-cv-btn{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .container-my-skills{
         width:90%;
@@ -832,7 +832,7 @@ nav .fa-solid{
         margin: 0 30px;
     }
     .single-portifo img{
-        height: 350px;
+        height: 300px;
     }
     .portifo-links ul{
         margin-bottom: 20px;
@@ -861,13 +861,13 @@ nav .fa-solid{
     }
 
     .single-blog img{
-        height: 350px;
+        height: 300px;
     }
     .blog-details h3{
         font-size: 20px;
     }
     .blog-details p{
-        font-size: 16px;
+        font-size: 18px;
     }
     .comments-datePublish{
         margin:10px;
@@ -876,7 +876,7 @@ nav .fa-solid{
         font-size: 16px;
     }
     form input,form textarea{
-        width: 100%;
+        width: 95%;
     }
 
     /* ===============footer========== */
@@ -889,7 +889,7 @@ nav .fa-solid{
         flex-basis: 100%;
     }
     .subscribe-myProjects input{
-        width: 100%;
+        width: 95%;
     }
     .subscribe-button{
         width:30%;
@@ -906,9 +906,7 @@ nav .fa-solid{
 }
 
 
-
-@media(max-width: 500px){
-
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
 
     nav .fa-regular, nav .fa-solid{
         display: block;
@@ -942,10 +940,8 @@ nav .fa-solid{
         cursor: pointer;
     }
 
-
-
     .container-overlay{
-        padding:20px 5%;
+        padding:20px;
         height: auto;
     }
 
@@ -953,21 +949,26 @@ nav .fa-solid{
     nav ul li{
         margin:10px 10px;
     }
-  
+    .home-details{
+        position: absolute;
+        bottom:250px;
+        width: 95%;
+    }
     .home-details .my-name{
         margin:20px auto;
     }
     .my-name span{
-        font-size: 24px;
+        font-size: 32px;
         font-weight: 500;
-    }
-    .home-details{
-        font-size: 18px;
-        margin-top:40px;
+        white-space: nowrap;
     }
     .home-details .intro-career{
         margin-bottom: 40px;
+        font-size: 28px;
     }
+   .intro-career span{
+    font-size: 32px;
+   }
     .more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
         padding: 3px 10px;
     }
@@ -978,19 +979,8 @@ nav .fa-solid{
         padding:30px 5%;
     }
 
-    .container-about-me h1, .container-my-skills h1,.container-portifo h1, .blogs-container h1,.contact-container h1{
-        font-size: 18px;
-        margin:30px 0;;
-    }
 
-    .container-about-me h1 hr, .container-my-skills h1 hr,.container-portifo h1 hr, .blogs-container h1 hr,.contact-container h1 hr{
-        width: 30px;
-        height: 6px;
-    }
 
-    .container-about-me h1 span,.container-my-skills h1 span,.container-portifo h1 span, .blogs-container h1 span,.contact-container h1 span{    
-        font-size: 20px;
-    }
     .container-about-me .row{
         flex-direction: column;
     }
@@ -1001,7 +991,7 @@ nav .fa-solid{
     }
 
     .col-right p{
-        font-size: 18px;
+        font-size: 32px;
     }
     .row .col-left{
         flex-basis: 90%;
@@ -1009,18 +999,99 @@ nav .fa-solid{
     .row .col-right{
         flex-basis: 90%;
     }
-    .hire-getCV{
+
+
+    .portifo-list{
+        grid-template-columns: 1fr;
+        margin: 0 30px;
+    }
+    .single-portifo img{
+        height: 600px;
+    }
+    .portifo-links ul{
+        margin-bottom: 20px;
+    }
+    .layer h3{
+        font-size: 32px;
+    }
+    .layer p{
+        font-size: 24px;
+    }
+    .share-next button{
+        margin: 40px 100px;
+    }
+
+
+    .blog-list{
+        grid-template-columns: 1fr;
+    }
+    .single-blog .blog-details{
+        padding:3px 10px;
+    }
+    .single-blog{
+        margin: 0 30px;
+    }
+
+    .single-blog img{
+        height: 600px;
+    }
+    .blog-details h3{
+        font-size: 28px;
+    }
+    .blog-details p{
+        font-size: 24px;
+    }
+
+    /* ===========contact======= */
+
+        .contact-details p{
+            font-size: 24px;
+        }
+    form input,form textarea{
+        width: 100%;
+    }
+
+
+    /* ==================footer======== */
+    .footer-container{
         flex-direction: column;
-    }
-    .hire-getCV button{
-        margin-bottom: 20px;
-    }
-    .get-cv-btn{
-        margin-bottom: 20px;
-    }
-    .container-my-skills{
         width:90%;
-        margin: 0 auto;
+        padding-left:20px;
     }
+    .who-I-am,.quick-links,.subscribe-myProjects{
+        flex-basis: 100%;
+    }
+    .who-I-am ,.quick-links h3,.subscribe-myProjects h3{
+        font-size: 32px;
+    }
+    .who-I-am p,.bottom-quick-links a{
+        font-size:24px;
+    }
+    .subscribe-myProjects input{
+        width: 95%;
+    }
+    .subscribe-button{
+        width:95%;
+    }
+    .social-icons{
+        margin-bottom: 20px;
+    }
+    .social-icons i{
+        font-size: 24px;
+    }
+    .copy-right{
+        margin-top: 10px;
+    }
+
+
 }
 
+
+@media only screen and (min-width:1024px){
+    .home-details{
+        position: absolute;
+        bottom:50px;
+        width: 95%;
+        font-size: 24px;
+    }
+}
