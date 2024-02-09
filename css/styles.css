@@ -250,9 +250,22 @@ nav h2 span{
 
 
 /* ----------------------------Skills--------------------- */
-.container-my-skills{
+/* .container-my-skills{
     width:80%;
+    display: flex;
+    justify-content: center;
+} */
+
+.all-skills-list{
+    display: flex;
+    justify-content: center;
 }
+
+.all-skills-list .left-container-skills,.all-skills-list .right-container-skills{
+    flex-basis: 48%;
+    margin: 0 20px;
+}
+
 #my-skills{
     padding:50px 5%;
     background-color: #6e6e6e;
@@ -289,7 +302,7 @@ nav h2 span{
 .single-skill p{
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     margin-left:20px;
 }
 
@@ -853,6 +866,14 @@ nav .fa-solid{
     }
     .single-skill p{
         font-size: 16px;
+    }
+
+    .all-skills-list .right-container-skills{
+        display: none;
+    }
+
+    .all-skills-list .left-container-skills{
+        flex-basis: 90%;
     }
 
 
