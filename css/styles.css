@@ -15,6 +15,7 @@
 
 body{
     color:#fff;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -119,10 +120,12 @@ nav h2 span{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .home-details .left-container-home{
     flex-basis: 55%;
+  
 }
 
 .home-details .right-container-home{
@@ -136,9 +139,9 @@ nav h2 span{
 }
 
 .home-details .my-name{
-    margin:50px auto;
+    margin:20px auto;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inknut Antiqua', serif;
 }
 
 .my-name span{
@@ -150,7 +153,8 @@ nav h2 span{
 .home-details .intro-career{
     width: 95%;
     margin-bottom: 80px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 36px;
 }
 
 .intro-career span{
@@ -726,7 +730,7 @@ nav .fa-solid{
     color:white;
     cursor: pointer;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 900px){
 
     nav .fa-regular, nav .fa-solid{
         display: block;
@@ -958,7 +962,7 @@ nav .fa-solid{
 }
 
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media only screen and (min-width: 901px) and (max-width: 1024px) {
 
     nav .fa-regular, nav .fa-solid{
         display: block;
@@ -1024,9 +1028,15 @@ nav .fa-solid{
         margin-bottom: 40px;
         font-size: 22px;
     }
+
+
+
    .intro-career span{
     font-size: 32px;
+    position: relative;
    }
+
+
     .more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
         padding: 3px 10px;
     }
