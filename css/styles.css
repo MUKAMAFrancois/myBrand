@@ -13,29 +13,23 @@
     scroll-behavior: smooth;
 } */
 
+body{
+    color:#fff;
+}
+
 
 /* -------------------Home----------------------------- */
 #home{
     width: 100%;
-    height: 100vh;
-    background-image: url(../images/portifo_mukama.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    position: relative;
+    height: auto;
+    background-color: #6e6e6e;
 }
 
 .container-overlay{
     font-family: 'Inknut Antiqua', serif;
     padding:20px 5%;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    height: auto;
+    padding-bottom: 120px;
     color:white;
 }
 
@@ -120,7 +114,26 @@ nav h2 span{
 }
 
 
+.home-details{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.home-details .left-container-home{
+    flex-basis: 55%;
+}
+
+.home-details .right-container-home{
+    flex-basis: 40%;
+}
+
+.right-container-home img{
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+}
 
 .home-details .my-name{
     margin:50px auto;
@@ -132,9 +145,7 @@ nav h2 span{
     font-size: 32px;
     font-weight: 700;
 }
-.home-details{
-    font-size: 22px;
-}
+
 
 .home-details .intro-career{
     width: 95%;
@@ -199,11 +210,12 @@ nav h2 span{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color:#fff;
 }
 
 .hire-getCV{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top:20px;
 }
 
@@ -436,6 +448,7 @@ nav h2 span{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transition: transform 0.6s;
+    color:#fff;
 }
 .single-blog:hover{
     transform: scale(1.03);
@@ -744,9 +757,20 @@ nav .fa-solid{
         margin:10px 10px;
     }
     .home-details{
-        position: absolute;
-        bottom:50px;
+        flex-direction: column;
     }
+    .home-details .right-container-home{
+        width: 95%;
+        padding-right: 20px;
+        margin-top:40px;
+    }
+    .home-details .left-container-home{
+        width: 95%;
+        justify-content: center;
+        padding-top:80px;
+    }
+
+
     .home-details .my-name{
         margin:20px auto;
     }
@@ -767,8 +791,15 @@ nav .fa-solid{
     .more-on-me-link span{
         font-size: 18px;
     }
+
+
+    /* /=========================/ about me. */
     #about-me,#my-skills,#my-portifolio,#my-blogs,#contact{
         padding:30px 5%;
+    }
+
+    .container-about-me{
+        padding-top:10px;
     }
 
     .container-about-me h1, .container-my-skills h1,.container-portifo h1, .blogs-container h1,.contact-container h1{
@@ -950,10 +981,16 @@ nav .fa-solid{
         margin:10px 10px;
     }
     .home-details{
-        position: absolute;
-        bottom:50px;
         width: 95%;
+        padding-top:120px;
+        padding-bottom: 80px;
     }
+
+
+
+    
+
+
     .home-details .my-name{
         margin:20px auto;
     }
@@ -975,11 +1012,16 @@ nav .fa-solid{
     .more-on-me-link span{
         font-size: 18px;
     }
+
+
+    /* ====================about me======= */
     #about-me,#my-skills,#my-portifolio,#my-blogs,#contact{
         padding:30px 5%;
     }
 
 
+
+    /* =====about me========= */
 
     .container-about-me .row{
         flex-direction: column;
@@ -1000,7 +1042,7 @@ nav .fa-solid{
         flex-basis: 90%;
     }
 
-
+/* =============portifolio.========== */
     .portifo-list{
         grid-template-columns: 1fr;
         margin: 0 30px;
@@ -1089,9 +1131,9 @@ nav .fa-solid{
 
 @media only screen and (min-width:1024px){
     .home-details{
-        position: absolute;
-        bottom:50px;
-        width: 95%;
-        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top:130px;
     }
 }
