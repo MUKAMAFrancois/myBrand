@@ -1,0 +1,85 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background:#6e6e6e;
+    --links_color:#067BC2;
+    --buttons_color:#BCFD4C;
+    --text_color:#000;
+    --icons_color:#F24E1E;
+    --side_dashboard_color:#DEDEDE;
+}
+
+body{
+    font-family:'Inknut Antiqua', serif;
+    background-color: var(--background);
+    color: var(--text_color);
+    height: 100vh;
+}
+
+
+/* ================Login section============= */
+ 
+.login-container{
+    background: #fff;
+    width:60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px auto;
+    height: auto;
+    padding:20px;
+    border-radius: 20px;
+}
+
+.login-container h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--text_color);
+
+}
+
+.form-group{
+    display:flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+.form-group input{
+    display: block;
+    padding:10px;
+    border-radius: 9px;
+    margin-left:20px;
+}
+
+.form-group button{
+    padding: 10px 20px;
+    border-radius: 9px;
+    background-color: var(--buttons_color);
+    color: var(--text_color);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.form-group button:hover{
+    background-color: #fff;
+    border:3px solid var(--buttons_color);
+    color: var(--text_color);
+}
+
+.forgot_password{
+    text-align: right;
+    color:var(--links_color);
+    text-decoration: none;
+
+}
+
+

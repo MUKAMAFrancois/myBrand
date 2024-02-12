@@ -48,7 +48,10 @@ body{
     z-index: 100;
     
 }
-
+.top-nav h2 a{
+    text-decoration: none;
+    color:#fff;
+}
 nav h1{
 width: fit-content;
 }
@@ -456,8 +459,8 @@ nav h2 span{
 
 .blog-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-    gap:50px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
 }
 .single-blog{
     position: relative;
@@ -466,6 +469,7 @@ nav h2 span{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transition: transform 0.6s;
     color:#fff;
+    height: auto;
 }
 .single-blog:hover{
     transform: scale(1.03);
@@ -474,7 +478,7 @@ nav h2 span{
 
 .single-blog img{
     width: 100%;
-    height: 400px;
+    height: 250px;
     border-radius: 10px;
 }
 
