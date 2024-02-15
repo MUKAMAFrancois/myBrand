@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./styles/single-blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h2><a href="" id="my-blogs">BLOGS</a></h2>
+            <ul class="outer-links">
+                <li><a href="">Home</a></li>
+                <li>
+                    <a href="">Categories</a>
+                    <ul class="drop-down-links"> 
+                        <li><a href="">Coding</a></li>
+                        <li><a href="">AI and ML</a></li>
+                        <li><a href="">Mathematics</a></li>
+                        <li><a href="">Philosophy</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="" class="signIn">Sign In</a></li> 
+                <i onclick="hideMenu()" class="fa-regular fa-circle-xmark"></i>
+            </ul>
+            <i  onclick="showMenu()" class="fa-solid fa-bars"></i>
+        </nav>
+    </header>
+    
+
+
+    <main>
+      <div class="left-right">
+        <section class="left-section-blog">
+            <div class="title-blog">
+                <h1>The Ultimate History of South Sudan</h1>
+                <div class="author-date">
+                    <p>By: Jim Aurels</p>
+                    <div class="calendar">
+                        <img src="./images/icons/time-icon.svg" alt="">
+                        <p>Aug 8, 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="read-full-blog">
+                <img src="./images/ssudan.jpg" alt="" class="image-of-blog">
+                <div class="blog-content">
+                    Lorem ipsum, dolor sit amet consectetur
+                     adipisicing elit. Impedit quae aperiam quo,
+                      quis architecto nesciunt dolore. Assumenda repudiandae
+                       repellat maiores laudantium sunt commodi consectetur ad 
+                       quos doloremque sapiente. Placeat reprehenderit pariatur, 
+                       repudiandae autem quisquam sint, laudantium cumque numquam
+                        voluptatibus odio ullam necessitatibus similique minus aspernatur omnis,
+                         molestias exercitationem. Tenetur aperiam
+                     eos illo nulla asperiores obcaecati deleniti cumque nihil iure non.
+
+                     Lorem ipsum dolor sit amet 
+                     consectetur adipisicing elit. 
+                     Autem error delectus assumenda at 
+                     itaque temporibus earum dicta natus 
+                     aliquid. Mollitia?
+                </div>
+
+                <div class="statistics">
+                    <div class="stat">
+                        <img src="./images/icons/views-icon.svg" alt="">
+                        <p>123K</p>
+                    </div>
+                    <div class="stat">
+                        <img src="./images/icons/comment-icon.svg" alt="">
+                        <p>256</p>
+                    </div>
+                    <div class="stat">
+                        <img src="./images/icons/likes-icon.svg" alt="">
+                        <p>1.3K</p>
+                    </div>
+                </div>
+
+                    <div class="read-similar-blogs">
+                        <div id="data-container">
+                            <h3>Read Similar Blogs</h3>
+                            <div class="card-container ">
+                                <a href="" class="card">
+                                    <img src="./images/increase.jpeg" alt="">
+                                    <div class="card-content">
+                                        <h3>National GDP in 2025</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="card">
+                                    <img src="./images/zoo.jpg" alt="">
+                                    <div class="card-content">
+                                        <h3>National GDP in 2025</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="card">
+                                    <img src="./images/memphis.jpg" alt="">
+                                    <div class="card-content">
+                                        <h3>National GDP in 2025</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="card">
+                                    <img src="./images/chicogo.jpg" alt="">
+                                    <div class="card-content">
+                                        <h3>National GDP in 2025</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="card">
+                                    <img src="./images/america.jpg" alt="">
+                                    <div class="card-content">
+                                        <h3>National GDP in 2025</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="card">
+                                    <img src="./images/coding!.jpg" alt="">
+                                    <div class="card-content">
+                                        <h3>National GDP in 2025</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="card">
+                                    <img src="./images/flower.jpg" alt="">
+                                    <div class="card-content">
+                                        <h3>National GDP in 2025</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="card">
+                                    <img src="./images/pc.jpeg" alt="">
+                                    <div class="card-content">
+                                        <h3>Political Factors</h3>
+                                        <div class="time-author">
+                                            <p>By: Ela Johnson</p>
+                                            <div class="time">
+                                                <img src="./images/icons/time-icon.svg" alt="">
+                                                <p>11 May, 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                     
+                        <div class="pagination" id="pagination"> 
+                            <a href="#" id="prev">Previous</a> 
+                            <a href="#" class="page-link" data-page="1">1</a> 
+                            <a href="#" class="page-link" data-page="2">2</a> 
+                            <a href="#" class="page-link" data-page="3">3</a> 
+                            <a href="#" id="next">Next</a> 
+                            <p id="page-numbers"> </p> 
+                        </div> 
+                    </div>
+                 
+                  
+                
+            </div>
+        </section>
+        <section class="right-section-latest-blogs">
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>
+            <div class="latest-blogs">
+                <h2 class="h2">Latest Blogs</h2>
+               <div class="list-of-blogs">
+                <a  href=""  class="single-blog-summary">
+                    <img src="./images/houselamps.jpeg" alt="">
+                    <div class="summary">
+                        <p class="blog-type">Philosophy</p>
+                        <h2>The Beauty of Philosophy.</h2>
+                        <div class="author-date">
+                            <p>By: Jim Aurels</p>
+                            <div class="calendar">
+                                <img src="./images/icons/time-icon.svg" alt="">
+                                <p>Aug 8, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href=""  class="single-blog-summary">
+                    <img src="./images/houselamps.jpeg" alt="">
+                    <div class="summary">
+                        <p class="blog-type">Philosophy</p>
+                        <h2>The Beauty of Philosophy.</h2>
+                        <div class="author-date">
+                            <p>By: Jim Aurels</p>
+                            <div class="calendar">
+                                <img src="./images/icons/time-icon.svg" alt="">
+                                <p>Aug 8, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href=""  class="single-blog-summary">
+                    <img src="./images/pc_work.webp" alt="">
+                    <div class="summary">
+                        <p class="blog-type">Philosophy</p>
+                        <h2>Coding during the Pandemic</h2>
+                        <div class="author-date">
+                            <p>By: Jim Aurels</p>
+                            <div class="calendar">
+                                <img src="./images/icons/time-icon.svg" alt="">
+                                <p>Aug 8, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href=""  class="single-blog-summary">
+                    <img src="./images/coding@home.jpg" alt="">
+                    <div class="summary">
+                        <p class="blog-type">Philosophy</p>
+                        <h2>The Beauty of Coding.</h2>
+                        <div class="author-date">
+                            <p>By: Jim Aurels</p>
+                            <div class="calendar">
+                                <img src="./images/icons/time-icon.svg" alt="">
+                                <p>Aug 8, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href=""  class="single-blog-summary">
+                    <img src="./images/coding@home.jpg" alt="">
+                    <div class="summary">
+                        <p class="blog-type">Philosophy</p>
+                        <h2>The Beauty of Coding.</h2>
+                        <div class="author-date">
+                            <p>By: Jim Aurels</p>
+                            <div class="calendar">
+                                <img src="./images/icons/time-icon.svg" alt="">
+                                <p>Aug 8, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href=""  class="single-blog-summary">
+                    <img src="./images/coding@home.jpg" alt="">
+                    <div class="summary">
+                        <p class="blog-type">Philosophy</p>
+                        <h2>The Beauty of Coding.</h2>
+                        <div class="author-date">
+                            <p>By: Jim Aurels</p>
+                            <div class="calendar">
+                                <img src="./images/icons/time-icon.svg" alt="">
+                                <p>Aug 8, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                    <button class="next-btn">Next</button>
+               </div>
+            </div>
+
+            <div class="sign-up-for-blogs">
+                <h2>Sign Up for Our Blogs</h2>
+                <div><input type="email" name="" id="" placeholder="Enter Your Email Adress"></div>
+                <button type="submit">Sign Up</button>
+            </div>
+
+        </section>
+      </div>
+
+
+        <section class="write-comment">
+            <h2>Leave your Comment!</h2>
+            <form action="" id="comment-form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Write your comment here"></textarea>
+                <button type="submit">Comment</button>
+            </form>
+        </section>
+    </main>
+
+   <footer>
+    <!-- <iframe src="" frameborder="0"></iframe> -->
+
+    <footer class="footer">
+        <div class="container">
+         <div class="row">
+           <div class="footer-col">
+             <h4>Who I am</h4>
+             <ul>
+               <li><a href="#">about me</a></li>
+               <li><a href="#">My services</a></li>
+               <li><a href="#">My Projects</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Quick Links</h4>
+             <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Categories</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Contact</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>follow me</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+
+
+   </footer>
+    
+
+    <script src="./js/single-blog.js"></script>
+</body>
+</html>
