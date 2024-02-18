@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="./css/general.css">
+</head>
+<body onload="readBlogs()">
+    <main>
+        <section class="left-section">
+            <h1>Dashboard</h1>
+
+          <a href="./profile.html">
+            <div class="single-div">
+                <div class="image-container">
+                    <img src="./images/portifo_mukama.png" alt="">
+                </div>
+                <div class="text-container">
+                    <p class="name">Mukama</p>
+                    <p>Admin</p>
+                </div>
+            </div>
+
+          </a>
+
+         <a href="./notifications.html">
+            <div class="single-div">
+                <div class="icon-container">
+                    <img src="./images/icons/notifications.svg" alt="">
+                </div>
+                <div class="text-container">
+                    Notifications
+                </div>
+            </div>
+         </a>
+
+          <a href="./addNewBlog.html">
+            <div class="single-div">
+                <div class="icon-container">
+                  <img src="./images/icons/blog.svg" alt="">
+                </div>
+                <div class="text-container">
+                    Blogs
+                </div>
+            </div>
+          </a>
+
+          <a href="./subscribers.html">
+            <div class="single-div">
+                <div class="icon-container">
+                  <img src="./images/icons/subscriptions.svg" alt="">
+                </div>
+                <div class="text-container">
+                    Subscriptions
+                </div>
+            </div>
+          </a>
+
+          <a href="./summary.html">
+            <div class="single-div">
+                <div class="icon-container">
+                  <img src="./images/icons/dashboard.svg" alt="">
+                </div>
+                <div class="text-container">
+                    Summary
+                </div>
+            </div>
+          </a>
+          <a href="./l">
+            
+            <div class="single-div">
+                <div class="icon-container">
+                  <img src="./images/icons/logout.svg" alt="">
+                </div>
+                <div class="text-container">
+                    Logout
+                </div>
+            </div>
+          </a>
+           
+        </section>
+
+
+        <section class="right-section-notifications">
+            <div class="search-container">
+                <div class="search">
+                    <img src="./images/icons/search.svg" alt="">
+                    <input type="search" name="" id="" placeholder="Search">
+                 </div>
+                 <button  class="search-btn" type="submit">Search</button>
+            </div>
+            <div class="crud-your-blogs">
+               <div class="filter-add">
+                    <h1>Here are Recent Blogs.</h1>
+                    <a href="#"><img src="./images/icons/filter-icon.svg" alt=""></a>
+                    <a href="./createBlog.html"><img src="./images/icons/add.svg" alt=""></a>
+               </div>
+                <div class="written-blogs-list">
+                    
+                    <!-- <div class="single-edit-blog">
+                        <div class="single-blog">
+                            <a class="blog-title-link" href="">Read Javascript 2023</a>
+                            <div class="crud-edit-or-blog">
+                              <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
+                               <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
+                            </div>      
+                        </div>
+                        <div class="date-of-publication">09:56AM 31/01/2024</div>
+                    </div> -->
+
+
+                    <form action="" class="update-blog-form">
+                        <div class="input-update-container">
+                            <input type="text" id="id" hidden>
+                        </div>
+                        <div class="input-update-container">
+                            <label for="title" class="label">Title:</label>
+                            <input type="text" name="title" id="update_title">
+                        </div>
+
+                        <div class="input-update-container">
+                            <label for="type" class="label">Type:</label>
+                            <select name="type" id="update_type">
+                                <option value="type1">ICT</option>
+                                <option value="type2">Sciences</option>
+                                <option value="type3">Tourism</option>
+                            </select>
+                        </div>
+
+                        <div class="input-update-container">
+                            <label for="image" class="label">Image:</label>
+                            <input type="file" name="image" id="update_image">
+                        </div>
+
+                        
+                        <div class="input-update-container">
+                            <label for="datepicker" class="label">Date:</label>
+                            <input type="date" id="datepicker" name="update_datepicker" value="" min="2024-01-01" max="2030-12-31">
+                        </div>
+                        <div class="input-update-container">
+                            <label for="content" class="label">Content:</label>
+                            <textarea name="content" id="update_content" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <button class="save_updates_btn">Save</button>
+                      
+                    </form>
+
+
+
+<!--                      
+                    <div class="back-next-btns">
+                        <button class="back-btn">Back</button>
+                        <button class="next-btn">Next</button>
+                    </div> -->
+
+                </div>
+            </div>
+           
+
+        </section>
+    </main>
+    <script type="module" src="./js/blogList.js"></script>
+    <script type="module" src="./js/editBlog.js"></script>
+</body>
+</html>

@@ -283,7 +283,25 @@ a:focus{
     height: auto;
 }
 
-.post-btn,.login-btn{
+.written-blogs-list{
+
+    flex-basis:65%;
+    position: relative;
+    width:100%;
+    top:10px;
+    left:0;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+}
+
+.update-blog-form{
+    display: none;
+}
+.post-btn,.login-btn,.save_updates_btn{
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--buttons_color);
@@ -310,18 +328,23 @@ a:focus{
     width: 100px; 
 }
 
-.input-container {
+.input-container,.input-update-container  {
     display: flex;
     align-items: center;
     margin: 20px 0;
 }
 
 .input-container input[type="text"],
+.input-update-container input[type="text"],
 .input-container select,
+.input-update-container select,
 .input-container input[type="password"],
 .input-container input[type="file"],
+.input-update-container input[type="file"],
 .input-container input[type="date"],
-.input-container textarea {
+.input-update-container input[type="date"],
+.input-container textarea,
+.input-update-container textarea {
     flex: 1;
     padding: 10px;
     margin-left: 10px;
@@ -330,7 +353,7 @@ a:focus{
     outline: none;
 }
 
-.input-container textarea {
+.input-container textarea,.input-update-container textarea  {
     width: calc(100% - 100px); 
 }
 
@@ -554,6 +577,7 @@ th, td {
     height: 30px;
     padding: 0 20px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .delete-notif,.delete-single-blog{
@@ -561,6 +585,7 @@ th, td {
     height: 30px;
     padding: 0 20px;
     border-radius: 10px;
+    cursor: pointer;
    
 
 }

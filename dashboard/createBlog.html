@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Blog</title>
+    <title>Type Blog</title>
     <link rel="stylesheet" href="./css/general.css">
 </head>
-<body onload="readBlogs()">
+<body>
     <main>
         <section class="left-section">
             <h1>Dashboard</h1>
@@ -67,7 +67,7 @@
                 </div>
             </div>
           </a>
-          <a href="./l">
+          <a href="./join_login.html">
             
             <div class="single-div">
                 <div class="icon-container">
@@ -82,8 +82,8 @@
         </section>
 
 
-        <section class="right-section-notifications">
-            <div class="search-container">
+        <section class="right-section-add-blog">
+           <div class="search-container">
                 <div class="search">
                     <img src="./images/icons/search.svg" alt="">
                     <input type="search" name="" id="" placeholder="Search">
@@ -91,57 +91,46 @@
                  <button  class="search-btn" type="submit">Search</button>
             </div>
 
-            
-            <!-- <div class="for-edit-blog-date">
-                <div class="date-range-oneDiv">
-                    <label for="datepicker" class="date-range-label">From:</label>
+              <div class="inputs-for-my-Blog">
+                <div class="input-container">
+                    <label for="title" class="label">Title:</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="input-container">
+                    <label for="type" class="label">Type:</label>
+                    <select name="type" id="type">
+                        <option value="type1">ICT</option>
+                        <option value="type2">Sciences</option>
+                        <option value="type3">Tourism</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="image" class="label">Image:</label>
+                    <input type="file" name="image" id="image">
+                </div>
+                <div class="input-container">
+                    <label for="datepicker" class="label">Date:</label>
                     <input type="date" id="datepicker" name="datepicker" value="" min="2024-01-01" max="2030-12-31">
                 </div>
-                <div class="date-range-oneDiv">
-                    <label for="datepicker" class="date-range-label">To:</label>
-                    <input type="date" id="datepicker" name="datepicker" value="" min="2024-01-01" max="2030-12-31">
+                <div class="input-container">
+                    <label for="content" class="label">Content:</label>
+                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
                 </div>
-            </div> -->
 
-
-            <div class="crud-your-blogs">
-               <div class="filter-add">
-                    <h1>Here are Recent Blogs.</h1>
-                    <a href="#"><img src="./images/icons/filter-icon.svg" alt=""></a>
-                    <a href="./typeBlog.html"><img src="./images/icons/add.svg" alt=""></a>
-               </div>
-                <div class="written-blogs-list">
-                    
-                    <!-- <div class="single-edit-blog">
-                        <div class="single-blog">
-                            <a class="blog-title-link" href="">Read Javascript 2023</a>
-                            <div class="crud-edit-or-blog">
-                              <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
-                               <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
-                            </div>      
-                        </div>
-                        <div class="date-of-publication">09:56AM 31/01/2024</div>
-                    </div> -->
-
-
-                </div>
+                <button class="post-btn" type="button">Post</button>
+              </div>
                 
-
-                <div class="back-next-btns">
-                    <button class="back-btn">Back</button>
-                    <button class="next-btn">Next</button>
-                </div>
+                
             </div>
-           
 
         </section>
     </main>
+    
 
-    <script src="./js/dashboard.js">
-         document.addEventListener('DOMContentLoaded', function() {
+    <script type="module"   src="./js/createBlog.js">
+           document.addEventListener('DOMContentLoaded', function() {
             readBlogs(); 
         });
     </script>
-    
 </body>
 </html>
