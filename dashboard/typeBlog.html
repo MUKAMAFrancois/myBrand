@@ -117,7 +117,7 @@
                     <textarea name="content" id="content" cols="30" rows="10"></textarea>
                 </div>
 
-                <button class="post-btn" type="submit">Post</button>
+                <button class="post-btn" type="button">Post</button>
               </div>
                 
                 
@@ -126,5 +126,11 @@
         </section>
     </main>
     
+
+    <script src="./js/dashboard.js">
+           document.addEventListener('DOMContentLoaded', function() {
+            readBlogs(); 
+        });
+    </script>
 </body>
 </html>

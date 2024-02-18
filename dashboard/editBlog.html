@@ -6,7 +6,7 @@
     <title>Edit Blog</title>
     <link rel="stylesheet" href="./css/general.css">
 </head>
-<body>
+<body onload="readBlogs()">
     <main>
         <section class="left-section">
             <h1>Dashboard</h1>
@@ -110,9 +110,9 @@
                     <a href="#"><img src="./images/icons/filter-icon.svg" alt=""></a>
                     <a href="./typeBlog.html"><img src="./images/icons/add.svg" alt=""></a>
                </div>
-                <div class="notifications-container">
+                <div class="written-blogs-list">
                     
-                    <div class="single-edit-blog">
+                    <!-- <div class="single-edit-blog">
                         <div class="single-blog">
                             <a class="blog-title-link" href="">Read Javascript 2023</a>
                             <div class="crud-edit-or-blog">
@@ -121,47 +121,7 @@
                             </div>      
                         </div>
                         <div class="date-of-publication">09:56AM 31/01/2024</div>
-                    </div>
-                    <div class="single-edit-blog">
-                        <div class="single-blog">
-                            <a class="blog-title-link" href="">How to raise your productivity in 2024.</a>
-                            <div class="crud-edit-or-blog">
-                              <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
-                               <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
-                            </div>      
-                        </div>
-                        <div class="date-of-publication">09:56AM 31/01/2024</div>
-                    </div>
-                    <div class="single-edit-blog">
-                        <div class="single-blog">
-                            <a class="blog-title-link" href="">Knowing Yourself, a way to brilliance</a>
-                            <div class="crud-edit-or-blog">
-                              <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
-                               <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
-                            </div>      
-                        </div>
-                        <div class="date-of-publication">09:56AM 31/01/2024</div>
-                    </div>
-                    <div class="single-edit-blog">
-                        <div class="single-blog">
-                            <a class="blog-title-link" href="">How to code like a pro</a>
-                            <div class="crud-edit-or-blog">
-                              <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
-                               <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
-                            </div>      
-                        </div>
-                        <div class="date-of-publication">09:56AM 31/01/2024</div>
-                    </div>
-                    <div class="single-edit-blog">
-                        <div class="single-blog">
-                            <a class="blog-title-link" href="">How to code like a pro</a>
-                            <div class="crud-edit-or-blog">
-                              <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
-                               <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
-                            </div>      
-                        </div>
-                        <div class="date-of-publication">09:56AM 31/01/2024</div>
-                    </div>
+                    </div> -->
 
 
                 </div>
@@ -176,6 +136,12 @@
 
         </section>
     </main>
+
+    <script src="./js/dashboard.js">
+         document.addEventListener('DOMContentLoaded', function() {
+            readBlogs(); 
+        });
+    </script>
     
 </body>
 </html>
