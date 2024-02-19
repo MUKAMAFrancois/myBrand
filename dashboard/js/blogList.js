@@ -1,22 +1,23 @@
 let blog_data=[
-    // {id:1,
-    //     title:"Why You must Love JS?", 
-    //     type:"Technology",
-    //     image:"images/increment.jpeg",
-    //     // author:"John Doe",
-    //     date:"12th May 2021",
-    //     content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. "
-    // },
+    {id:1,
+        title:"Why You must Love JS?", 
+        type:"Technology",
+        image:"images/increment.jpeg",
+        // author:"John Doe",
+        date:"12th May 2021",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. "
+    },
 
-    // {id:2,
-    //     title:"The Hero of the 21st Century", 
-    //     type:"Politics",
-    //     image:"images/increment.jpeg",
-    //     // author:"James Millina",
-    //     date:"19th June 2021",
-    //     content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. "
-    // }
+    {id:2,
+        title:"The Hero of the 21st Century", 
+        type:"Politics",
+        image:"images/increment.jpeg",
+        // author:"James Millina",
+        date:"19th June 2021",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. "
+    }
 ];
+
 
 function readBlogs(){
     document.querySelector('.update-blog-form').style.display="none";
@@ -25,15 +26,12 @@ function readBlogs(){
 
     // Read the data from local storage and parse as JSON
     let deserialized_data = JSON.parse(localStorage.getItem('blog_data')) || [];
+    // Update the global blog_data array with the new data from local storage
+    blog_data = deserialized_data;
 
-    if (!deserialized_data.length) {
-        console.warn("Error: Blog data not found.");
-        return;
-    }
-
-    localStorage.setItem("blog_data",JSON.stringify(deserialized_data));
+    localStorage.setItem("blog_data",JSON.stringify(blog_data));
     let elements="";
-    deserialized_data.map(record=>{
+    blog_data.map(record=>{
         elements+=`  
         <div class="single-edit-blog">
             <div class="single-blog">
@@ -41,8 +39,7 @@ function readBlogs(){
                 <div class="crud-edit-or-blog">
                     <div><button type="button" class="edit-single-blog"><img src="./images/icons/edit.svg" alt=""></button></div>
                     <div><button type="button" class="delete-single-blog"  onclick="deleteRecord(${record.id})"><img src="./images/icons/delete.svg" alt=""></button></div>
-                </div>
-                  
+                </div>      
             </div>
             <div class="date-of-publication">${record.date}</div>
         </div>
@@ -92,6 +89,21 @@ function postBlog(){
         window.location.href="./bloglist.html";
     }
 }
-
 document.querySelector('.post-btn').addEventListener('click',postBlog);
+
+
+function deleteBlog(id) {
+    let index = blog_data.findIndex(record => record.id === id);
+    if (index !== -1) {
+        blog_data.splice(index, 1);
+        localStorage.setItem("blog_data", JSON.stringify(blog_data)); // update localStorage
+        readBlogs();
+    }
+}
+
+function deleteRecord(id) {
+    if (confirm("Are you sure you want to delete this record?")) {
+        deleteBlog(id);
+    }
+}
 
