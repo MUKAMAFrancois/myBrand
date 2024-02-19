@@ -18,14 +18,6 @@ export let blog_data=[
         // author:"James Millina",
         date:"19th June 2021",
         content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. "
-    },
-    {id:3,
-        title:"Stay Healthy, Stay Happy", 
-        type:"Politics",
-        image:"images/increment.jpeg",
-        // author:"James Millina",
-        date:"19th June 2021",
-        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. "
     }
 
 ];
@@ -60,7 +52,4 @@ export function readBlogs(){
 
     blogListContainer.innerHTML=elements;
 }
-
-
-
 window.readBlogs=readBlogs;

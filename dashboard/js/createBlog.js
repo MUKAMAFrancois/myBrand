@@ -1,5 +1,7 @@
 // createBlog.js
 
+import { blog_data } from "./blogList.js";
+
 
 function createBlog(){
     const title=document.querySelector('#title').value;
@@ -7,6 +9,7 @@ function createBlog(){
     const type=document.querySelector('#type').value;
     const date=document.querySelector('#datepicker').value;
     const image=document.querySelector('#image').value;
+    const id =blog_data.length+1;
 
     // console.log("Title:", title);
     // console.log("Content:", content);
@@ -30,19 +33,21 @@ else{
     document.querySelector('#type').value="";
     document.querySelector('#datepicker').value="";
     document.querySelector('#image').value="";
+    console.log(blog_data);
     return true;
+
 }
 }
 
 
-function redirectToEditBlogPage() {
-    window.location.href = "./bloglist.html";
-}
+// function redirectToEditBlogPage() {
+//     window.location.href = "./bloglist.html";
+// }
 
-document.querySelector('.post-btn').addEventListener('click', function() {
-    if(createBlog()){
-        redirectToEditBlogPage();
-    }
-});
+document.querySelector('.post-btn').addEventListener('click', createBlog);
+    // if(createBlog()){
+    //     redirectToEditBlogPage();
+    // }
+
 
 

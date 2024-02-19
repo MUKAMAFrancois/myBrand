@@ -85,7 +85,7 @@ form input{
     transform: scale(1.05);
 }
 
-.login-button{
+.login-button,.signup-button{
     width: 30%;
     padding: 1px 10px;
     border: none;
@@ -96,10 +96,11 @@ form input{
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 20px;
+    text-decoration: none;
   
 }
 
-.login-button:hover{
+.login-button:hover,.signup-button:hover{
     background: #fff;
     color:#000;
     border: 2px solid #bcfd4c;
