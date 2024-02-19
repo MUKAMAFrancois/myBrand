@@ -94,3 +94,145 @@ function showMenu(){
 }
 
 
+/* =============COMMENT SYSTEM============ */
+const comments= document.querySelector('.comments'),
+		userInputName=document.querySelector('.user'),
+		userCommnetInput=document.querySelector('.usercomment'),
+		publishBtn=document.getElementById('publish');
+
+const user = {
+			name: null,
+			image: null,
+			message: null,
+			date: null
+		}
+
+userCommnetInput.addEventListener('input', function(){
+	// if(userCommnetInput.value.length > 0){
+	// 	publishBtn.disabled = false;
+	// }else{
+	// 	publishBtn.disabled = true;
+	// }
+
+	if(!userCommnetInput.value){
+		publishBtn.setAttribute('disabled', 'disabled');
+		publishBtn.classList.remove('abled');
+	}
+	else{
+		publishBtn.removeAttribute('disabled');
+		publishBtn.classList.add('abled');
+	}
+});
+
+
+function postComment(){
+	if(!userCommnetInput.value) return;
+	user.name = userInputName.value;
+	user.message = userCommnetInput.value;
+	user.date = new Date().toLocaleString();
+	let published = 
+		`  <div class="single-commented">
+		<img src="./images/comment_imgs/user1.png" alt="">
+		<div class="written-comment">
+			<h4>${user.name}</h4>
+			<p>${user.message}  <br> <span id="comment-date">${user.date}</span></p>
+			<div class="comment-actions">
+				<div class="likes">Likes <span>0</span></div>
+				<div class="dislikes">Dislikes <span>0</span></div>
+			</div>
+		</div>
+	</div>`;
+
+	comments.innerHTML += published;
+	userCommnetInput.value = '';
+	publishBtn.classList.remove('abled');
+
+	let allComments=document.querySelectorAll('.single-commented').length;
+	document.getElementById("comment").textContent=allComments;
+
+}
+
+publishBtn.addEventListener('click',postComment);
+
+
+//* =========SEARCH======= */
+function searchBlog(){
+	const blogSearch=document.getElementById('search-recent-blog');
+	let text_being_typed =blogSearch.value.toLowerCase();
+	let list_of_blogs=document.querySelectorAll('.summary h2');
+
+	list_of_blogs.forEach(single_blog=>{
+		let blog_text =single_blog.textContent.toLowerCase();
+		
+		if(blog_text.includes(text_being_typed)){
+			single_blog.parentElement.parentElement.style.display="block";
+		} else{
+			single_blog.parentElement.parentElement.style.display="none";
+		}
+	})
+
+}
+
+document.getElementById('search-recent-blog').addEventListener('input',searchBlog);
+
+
+
+/* ==========pagination of recent Blogs======== */
+
+
+
+let presentPage = 1;
+const itemsPerPage = 2,
+ 		items = document.querySelectorAll('.single-blog-summary'),
+ 		all_Pages = Math.ceil(items.length / itemsPerPage),
+ 		previousBtn=document.querySelector('.previous-btn'),
+		nextBtn=document.querySelector('.next-btn')
+
+// Initially hide the Previous button
+previousBtn.style.display = 'none';
+
+// Function to show items for the current page
+function showPage(page) {
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    items.forEach((item, index) => {
+        if (index >= startIndex && index < endIndex) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Show the initial page
+showPage(presentPage);
+
+// Event listener for Next button
+nextBtn.addEventListener('click', () => {
+    presentPage++;
+    if (presentPage > 1) {
+        previousBtn.style.display = 'block';
+    }
+    if (presentPage >= all_Pages) {
+        nextBtn.style.display = 'none';
+    }
+    showPage(presentPage);
+});
+
+// Event listener for Previous button
+previousBtn.addEventListener('click', () => {
+    presentPage--;
+    if (presentPage === 1) {
+        previousBtn.style.display = 'none';
+    }
+    if (presentPage < all_Pages) {
+        nextBtn.style.display = 'block';
+    }
+    showPage(presentPage);
+});
+
+
+
+
+/* =========	LIKES=========== */
