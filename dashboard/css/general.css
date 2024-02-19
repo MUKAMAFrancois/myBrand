@@ -191,7 +191,7 @@ a:focus{
     flex-basis:65%;
     position: relative;
     width:600px;
-    top:100px;
+    top:200px;
     left:320px;
     background-color: #fff;
     padding:20px 10px;
@@ -268,25 +268,34 @@ a:focus{
 
 /* ================TYPE A BLOG============== */
 
-.inputs-for-my-Blog,.login-container{
+.blog-list-add-update-container{
+    position: relative;
+}
+
+.add-new-blog-form,.login-container{
 
     flex-basis:65%;
     position: relative;
     width:600px;
-    top:100px;
-    left:320px;
+    top:-50px;
+    left:10px;
     background-color: #fff;
     padding:20px 30px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     height: auto;
+    color:#000;
+
+}
+.add-new-blog-form{
+    display: none;
 }
 
 .written-blogs-list{
 
     flex-basis:65%;
-    position: relative;
+    position: absolute;
     width:100%;
     top:10px;
     left:0;
@@ -296,6 +305,21 @@ a:focus{
     border-radius: 20px;
     height: auto;
     color:#000;
+}
+
+.update-blog-form{
+    position: absolute;   
+    flex-basis:65%;
+    width:90%;
+    top:10px;
+    left:0;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+    background: var(--icons_color);
 }
 
 .update-blog-form{
@@ -318,7 +342,7 @@ a:focus{
 }
 
 
-.post-btn:hover,.login-btn:hover{
+.post-btn:hover,.login-btn:hover,.save_updates_btn:hover{
     background-color: #fff;
     color: #000;
     border: 2px solid var(--buttons_color);
@@ -643,8 +667,21 @@ th, td {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin-top:30px;
+    align-items: center;
 }
 .filter-add img{
     width: 40px;
     height: 40px;
+}
+.filter-add button{
+    width: 45px;
+    height: 45px;
+    border-radius: 23px;
+    border:none;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+.filter-add button:hover{
+    transform: scale(1.1);
 }

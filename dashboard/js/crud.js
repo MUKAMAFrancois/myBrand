@@ -52,7 +52,7 @@ function readBlogs(){
 
     blogListContainer.innerHTML=elements;
 }
-window.readBlogs=readBlogs;
+
 
 
 

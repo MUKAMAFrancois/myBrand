@@ -369,7 +369,7 @@ nav ul li a{
     margin-right: 10px;
 }
 .summary h2{
-    font-size: 16px;
+    font-size: 24px;
     font-family: 'Inknut Antiqua',serif;
     line-height: 32px;
     color:#fff;
@@ -377,12 +377,19 @@ nav ul li a{
 
 .author-date{
     font-family:var(--blog-font-family);
-    color:#1d1c1c;
+    color:#000;
     width: fit-content;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+   
 
+}
+
+.author-date p{
+    color:#000;
+    font-weight: 900;
+    font-size: 16px;
 }
 .calendar{
     display: flex;

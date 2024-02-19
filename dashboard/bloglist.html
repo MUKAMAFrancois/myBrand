@@ -93,27 +93,54 @@
             <div class="crud-your-blogs">
                <div class="filter-add">
                     <h1>Here are Recent Blogs.</h1>
-                    <a href="#"><img src="./images/icons/filter-icon.svg" alt=""></a>
-                    <a href="./createBlog.html"><img src="./images/icons/add.svg" alt=""></a>
+                    <!-- <a href="#"><img src="./images/icons/filter-icon.svg" alt=""></a> -->
+                    <button type="button" class="add-blog-button"><img src="./images/icons/add.svg" alt=""></button>
                </div>
-                <div class="written-blogs-list">
+
+            <div class="blog-list-add-update-container">
+
+
+                    <form action="" class="add-new-blog-form">
+                        <h2>Create New Blog</h2>
+
+                        <div class="input-container">
+                            <label for="title" class="label">Title:</label>
+                            <input type="text" name="title" id="title">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="type" class="label">Type:</label>
+                            <select name="type" id="type">
+                                <option value="type1">ICT</option>
+                                <option value="type2">Sciences</option>
+                                <option value="type3">Tourism</option>
+                            </select>
+                        </div>
+
+                        
+                        <div class="input-container">
+                            <label for="image" class="label">Image:</label>
+                            <input type="file" name="image" id="image">
+                        </div>
+
+
+                        <div class="input-container">
+                            <label for="datepicker" class="label">Date:</label>
+                            <input type="date" id="datepicker" name="datepicker" value="" min="2024-01-01" max="2030-12-31">
+                        </div>
+                        <div class="input-container">
+                            <label for="content" class="label">Content:</label>
+                            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                        </div>
+        
+                        <button class="post-btn" type="button">Post</button>
+
+                        
+                    </form>
+
                     
-                    <!-- <div class="single-edit-blog">
-                        <div class="single-blog">
-                            <a class="blog-title-link" href="">Read Javascript 2023</a>
-                            <div class="crud-edit-or-blog">
-                              <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
-                               <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
-                            </div>      
-                        </div>
-                        <div class="date-of-publication">09:56AM 31/01/2024</div>
-                    </div> -->
-
-
-                    <form action="" class="update-blog-form">
-                        <div class="input-update-container">
-                            <input type="text" id="id" hidden>
-                        </div>
+                <form action="" class="update-blog-form">
+                        <h2>Update</h2>
                         <div class="input-update-container">
                             <label for="title" class="label">Title:</label>
                             <input type="text" name="title" id="update_title">
@@ -136,33 +163,41 @@
                         
                         <div class="input-update-container">
                             <label for="datepicker" class="label">Date:</label>
-                            <input type="date" id="datepicker" name="update_datepicker" value="" min="2024-01-01" max="2030-12-31">
+                            <input type="date" id="update_datepicker" name="update_datepicker" value="" min="2024-01-01" max="2030-12-31">
                         </div>
                         <div class="input-update-container">
                             <label for="content" class="label">Content:</label>
                             <textarea name="content" id="update_content" cols="30" rows="10"></textarea>
                         </div>
 
-                        <button class="save_updates_btn">Save</button>
-                      
-                    </form>
+                        <button class="save_updates_btn" type="button">Save</button>
+                
+                </form>
+                    <div class="written-blogs-list">
+                        
+                        <!-- <div class="single-edit-blog">
+                            <div class="single-blog">
+                                <a class="blog-title-link" href="">Read Javascript 2023</a>
+                                <div class="crud-edit-or-blog">
+                                <div>  <a class="edit-single-blog" href=""><img src="./images/icons/edit.svg" alt=""></a></div>
+                                <div> <a class="delete-single-blog" href=""><img src="./images/icons/delete.svg" alt=""></a></div>
+                                </div>      
+                            </div>
+                            <div class="date-of-publication">09:56AM 31/01/2024</div>
+                        </div> -->
 
+                        <div class="back-next-btns">
+                            <button class="back-btn">Back</button>
+                            <button class="next-btn">Next</button>
+                        </div> 
 
-
-<!--                      
-                    <div class="back-next-btns">
-                        <button class="back-btn">Back</button>
-                        <button class="next-btn">Next</button>
-                    </div> -->
-
-                </div>
+                    </div>
             </div>
+
            
 
         </section>
     </main>
-    <!-- <script type="module" src="./js/blogList.js"></script>
-    <script type="module" src="./js/editBlog.js"></script> -->
-    <script src="./js/crud.js"></script>
+    <script src="./js/bloglist.js"></script>
 </body>
 </html>
