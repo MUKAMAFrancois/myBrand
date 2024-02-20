@@ -247,3 +247,14 @@ small {
         font-size: 16px;
     }
 }
+
+
+/* form validation */
+
+.error ,.message-validation{
+    color: #7e0202;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+
