@@ -24,7 +24,8 @@
                  <li><a href="#my-portifolio">Portifolio</a></li>
                  <li><a href="#my-blogs">Blogs</a></li>
                  <li><a href="#contact">Contact</a></li>
-                <button class="signIn-link"> <a href="./login.html" >Sign In</a></button>
+                <button class="signIn-link"> <a href="./signup.html" >Sign In</a></button>
+                <button class="signOut-link"  style="display:none"> <a href="./login.html" >Sign out</a></button>
                 <i class="fa-regular fa-circle-xmark" onclick="clickingX_Symbolmenu()"></i>
              </ul>
              <i class="fa-solid fa-bars" onclick="openMenu()"></i>
@@ -247,7 +248,9 @@
                      </div>
                     </div>
                 </div>
-                <div class="single-blog">
+
+
+                 <div class="single-blog">
                     <img src="./images/design-w.jpg" alt="">
                     <div class="blog-details">
                         <h3>How to Design like a Pro.</h3>
@@ -274,7 +277,7 @@
                             <div><i class="fa-solid fa-calendar-days"></i></span> <span style="font-weight: bold; color:#333;">Aug 7, 2023</span></div>
                          </div>
                     </div>
-                </div>
+                </div> 
               
             </div>
 
@@ -362,6 +365,13 @@
         delay:50,
      });
    </script>
+
+<!-- <script>
+    if (!localStorage.getItem('formData')) {
+        window.location.href = "./signup.html";
+    }
+</script> -->
+<script src="./js/login.js"></script>
     
 </body>
 </html>
