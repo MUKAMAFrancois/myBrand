@@ -1,7 +1,8 @@
 
 /* ===============PROFILE.CSS================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+
 
 *{
     padding:0;
@@ -191,7 +192,7 @@ a:focus{
     flex-basis:65%;
     position: relative;
     width:600px;
-    top:100px;
+    top:200px;
     left:320px;
     background-color: #fff;
     padding:20px 10px;
@@ -268,22 +269,64 @@ a:focus{
 
 /* ================TYPE A BLOG============== */
 
-.inputs-for-my-Blog,.login-container{
+.blog-list-add-update-container{
+    position: relative;
+}
+
+.add-new-blog-form,.login-container{
 
     flex-basis:65%;
     position: relative;
     width:600px;
-    top:100px;
-    left:320px;
+    top:120px;
+    left:10px;
     background-color: #fff;
     padding:20px 30px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     height: auto;
+    color:#000;
+
+}
+.add-new-blog-form{
+    display: none;
 }
 
-.post-btn,.login-btn{
+.written-blogs-list{
+
+    flex-basis:65%;
+    position: absolute;
+    width:100%;
+    top:10px;
+    left:0;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+}
+
+.update-blog-form{
+    position: absolute;   
+    flex-basis:65%;
+    width:90%;
+    top:10px;
+    left:0;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+    background: var(--icons_color);
+}
+
+.update-blog-form{
+    display: none;
+}
+.post-btn,.login-btn,.save_updates_btn{
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--buttons_color);
@@ -300,7 +343,7 @@ a:focus{
 }
 
 
-.post-btn:hover,.login-btn:hover{
+.post-btn:hover,.login-btn:hover,.save_updates_btn:hover{
     background-color: #fff;
     color: #000;
     border: 2px solid var(--buttons_color);
@@ -310,18 +353,23 @@ a:focus{
     width: 100px; 
 }
 
-.input-container {
+.input-container,.input-update-container  {
     display: flex;
     align-items: center;
     margin: 20px 0;
 }
 
 .input-container input[type="text"],
+.input-update-container input[type="text"],
 .input-container select,
+.input-update-container select,
 .input-container input[type="password"],
 .input-container input[type="file"],
+.input-update-container input[type="file"],
 .input-container input[type="date"],
-.input-container textarea {
+.input-update-container input[type="date"],
+.input-container textarea,
+.input-update-container textarea {
     flex: 1;
     padding: 10px;
     margin-left: 10px;
@@ -330,7 +378,7 @@ a:focus{
     outline: none;
 }
 
-.input-container textarea {
+.input-container textarea,.input-update-container textarea  {
     width: calc(100% - 100px); 
 }
 
@@ -554,6 +602,7 @@ th, td {
     height: 30px;
     padding: 0 20px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .delete-notif,.delete-single-blog{
@@ -561,6 +610,7 @@ th, td {
     height: 30px;
     padding: 0 20px;
     border-radius: 10px;
+    cursor: pointer;
    
 
 }
@@ -618,8 +668,21 @@ th, td {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin-top:30px;
+    align-items: center;
 }
 .filter-add img{
     width: 40px;
     height: 40px;
+}
+.filter-add button{
+    width: 45px;
+    height: 45px;
+    border-radius: 23px;
+    border:none;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+.filter-add button:hover{
+    transform: scale(1.1);
 }

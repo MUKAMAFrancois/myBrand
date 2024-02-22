@@ -54,6 +54,11 @@ body{
 nav h1{
 width: fit-content;
 }
+.menu-list-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 nav ul li{
@@ -87,8 +92,12 @@ nav ul li a:hover::after{
 nav h2 span{
     color:#bcfd4c;
 }
+.signIn-link{
+    height: 40px;
 
-.signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
+}
+
+.signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo,.signOut-link{
     color: #000;
     background: #bcfd4c;
     text-decoration: none;
@@ -97,7 +106,7 @@ nav h2 span{
     border:none;
     transition: transform 0.6s;
 }
-.signIn-link a,.more-on-me-link a,.hire-me-btn a,.more-skills-link a,.see-more-portifo a{
+.signIn-link a,.more-on-me-link a,.hire-me-btn a,.more-skills-link a,.see-more-portifo a,.signOut-link a{
     color: #000;
     font-family: 'Inknut Antiqua', serif;
     text-decoration: none;
@@ -106,15 +115,16 @@ nav h2 span{
   
 }
 
-.signIn-link:hover,.more-on-me-link:hover,.hire-me-btn:hover,.more-skills-link:hover,.see-more-portifo:hover{
+.signIn-link:hover,.more-on-me-link:hover,.hire-me-btn:hover,.more-skills-link:hover,.see-more-portifo:hover,.signOut-link:hover{
     background: #fff;
     color: #000;
     transform: scale(1.07);
 }
 
-.signIn-link a:hover,.more-on-me-link a:hover,.hire-me-btn a:hover,.more-skills-link a:hover,.see-more-portifo a:hover{
+.signIn-link a:hover,.more-on-me-link a:hover,.hire-me-btn a:hover,.more-skills-link a:hover,.see-more-portifo a:hover,.signOut-link a:hover{
     color: #000;
 }
+
 
 
 .home-details{

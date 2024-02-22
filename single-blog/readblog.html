@@ -74,11 +74,23 @@
                     </div>
                     <div class="stat">
                         <img src="./images/icons/comment-icon.svg" alt="">
-                        <p>256</p>
+                        <p id="comment">0</p>
                     </div>
                     <div class="stat">
-                        <img src="./images/icons/likes-icon.svg" alt="">
-                        <p>1.3K</p>
+                        <!-- <img  class="added-likes"  src="./images/icons/likes-icon.svg" alt="">
+                        <p>1.3K</p> -->
+
+
+                        <div class="box_of_likes">
+                            <div class="icons">
+                                <i  id="likeBtn" class="fa-regular fa-heart"></i>
+                                <span class="like" id="likeCount">0</span>
+                            </div>
+                            <div class="icons">
+                                <i  id="dislikeBtn" class="fa-regular fa-thumbs-down"></i>
+                                <span class="dislike" id="dislikeCount">0</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -209,8 +221,7 @@
         </section>
         <section class="right-section-latest-blogs">
             <div class="search-container">
-                <input type="text" placeholder="Search">
-                <button type="submit">Search</button>
+                <input type="text" placeholder="Search a Blog" id="search-recent-blog">
             </div>
             <div class="latest-blogs">
                 <h2 class="h2">Latest Blogs</h2>
@@ -219,7 +230,7 @@
                     <img src="./images/houselamps.jpeg" alt="">
                     <div class="summary">
                         <p class="blog-type">Philosophy</p>
-                        <h2>The Beauty of Philosophy.</h2>
+                        <h2>Best Team of Year</h2>
                         <div class="author-date">
                             <p>By: Jim Aurels</p>
                             <div class="calendar">
@@ -233,7 +244,7 @@
                     <img src="./images/houselamps.jpeg" alt="">
                     <div class="summary">
                         <p class="blog-type">Philosophy</p>
-                        <h2>The Beauty of Philosophy.</h2>
+                        <h2>Longest River</h2>
                         <div class="author-date">
                             <p>By: Jim Aurels</p>
                             <div class="calendar">
@@ -247,7 +258,7 @@
                     <img src="./images/pc_work.webp" alt="">
                     <div class="summary">
                         <p class="blog-type">Philosophy</p>
-                        <h2>Coding during the Pandemic</h2>
+                        <h2>The future of 2050</h2>
                         <div class="author-date">
                             <p>By: Jim Aurels</p>
                             <div class="calendar">
@@ -299,8 +310,11 @@
                         </div>
                     </div>
                 </a>
+                    <div class="next-previous">
+                        <button class="previous-btn">Previous</button>
+                        <button class="next-btn">Next</button>
+                    </div>
 
-                    <button class="next-btn">Next</button>
                </div>
             </div>
 
@@ -316,13 +330,38 @@
 
         <section class="write-comment">
             <h2>Leave your Comment!</h2>
-            <form action="" id="comment-form">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write your comment here"></textarea>
-                <button type="submit">Comment</button>
-            </form>
+         
+            <div class="commentbox">
+                <img src="./images/comment_imgs/user1.png" alt="">
+                <div class="commenting-content">
+                    <div class="your-name">
+                        <h4>Your Email</h4>
+                        <input type="email" value="" placeholder="Your Email" class="user" id="commented_email">
+                    </div>
+                    <div class="commentinput">
+                        <input type="text" placeholder="Enter comment" class="usercomment">
+                        <div class="buttons">
+                            <button type="submit" disabled id="publish">Comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments">
+                <!-- <div class="single-commented">
+                    <img src="./images/comment_imgs/user1.png" alt="">
+                    <div class="written-comment">
+                        <h4>John Doe</h4>
+                        <p>Lorem ipsum dolor sit amet. <br> <span id="comment-date">12-04-2023</span></p>
+                        <div class="comment-actions">
+                            <div class="likes">Likes <span>0</span></div>
+                            <div class="dislikes">Dislikes <span>0</span></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
         </section>
+
+
     </main>
 
    <footer>
