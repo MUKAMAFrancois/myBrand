@@ -26,6 +26,20 @@ body{
     border: 2px solid #bcfd4c;
     position: relative;
 }
+
+.back_home{
+    position: absolute;
+    right: -30px;
+    top:-30px;
+    cursor: pointer;
+}
+
+.back_home i{
+    font-size: 42px;
+    background-color: #fe4e1e;
+    color:#fff;
+    border-radius: 20px;
+}
 .login-container h1{
     font-size: 30px;
     font-weight: 700;
