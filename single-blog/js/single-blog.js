@@ -95,24 +95,13 @@ function showMenu(){
 
 
 /* =============COMMENT SYSTEM============ */
-const comments= document.querySelector('.comments'),
-		userInputName=document.querySelector('.user'),
-		userCommnetInput=document.querySelector('.usercomment'),
-		publishBtn=document.getElementById('publish');
 
-const user = {
-			name: null,
-			image: null,
-			message: null,
-			date: null
-		}
+const comments= document.querySelector('.comments'),
+		userCommnetInput=document.querySelector('.usercomment'),
+		publishBtn=document.getElementById('publish'),
+		date = new Date().toLocaleString();
 
 userCommnetInput.addEventListener('input', function(){
-	// if(userCommnetInput.value.length > 0){
-	// 	publishBtn.disabled = false;
-	// }else{
-	// 	publishBtn.disabled = true;
-	// }
 
 	if(!userCommnetInput.value){
 		publishBtn.setAttribute('disabled', 'disabled');
@@ -125,34 +114,51 @@ userCommnetInput.addEventListener('input', function(){
 });
 
 
-function postComment(){
-	if(!userCommnetInput.value) return;
-	user.name = userInputName.value;
-	user.message = userCommnetInput.value;
-	user.date = new Date().toLocaleString();
-	let published = 
-		`  <div class="single-commented">
-		<img src="./images/comment_imgs/user1.png" alt="">
-		<div class="written-comment">
-			<h4>${user.name}</h4>
-			<p>${user.message}  <br> <span id="comment-date">${user.date}</span></p>
-			<div class="comment-actions">
-				<div class="likes">Likes <span>0</span></div>
-				<div class="dislikes">Dislikes <span>0</span></div>
-			</div>
-		</div>
-	</div>`;
 
-	comments.innerHTML += published;
-	userCommnetInput.value = '';
-	publishBtn.classList.remove('abled');
 
-	let allComments=document.querySelectorAll('.single-commented').length;
-	document.getElementById("comment").textContent=allComments;
+function postComment() {
+    if (!userCommnetInput.value) return;
 
+    const users = JSON.parse(localStorage.getItem('formData')) || [];
+    const commentedEmail = document.getElementById('commented_email').value.toLowerCase();
+    const userExist = users.some(user => user.reg_email === commentedEmail);
+
+    if (userExist) {
+        // User is registered, allow them to post a comment
+        const typedMessage = userCommnetInput.value;
+        const published = 
+            `<div class="single-commented">
+                <img src="./images/comment_imgs/user1.png" alt="">
+                <div class="written-comment">
+                    <h4>${commentedEmail}</h4>
+                    <p>${typedMessage}<br><span id="comment-date">${date}</span></p>
+                    <div class="comment-actions">
+                        <div class="likes">Likes <span>0</span></div>
+                        <div class="dislikes">Dislikes <span>0</span></div>
+                    </div>
+                </div>
+            </div>`;
+        comments.innerHTML += published;
+        userCommnetInput.value = '';
+        publishBtn.classList.remove('abled');
+
+        let allComments = document.querySelectorAll('.single-commented').length;
+        document.getElementById("comment").textContent = allComments;
+    } else {
+        // User is not registered, inform them to register or login
+        alert("You can't comment, please Register or Login");
+    }
 }
 
+
 publishBtn.addEventListener('click',postComment);
+
+
+
+
+
+
+
 
 
 //* =========SEARCH======= */
@@ -236,3 +242,48 @@ previousBtn.addEventListener('click', () => {
 
 
 /* =========	LIKES=========== */
+
+
+
+let isLiked = false;
+let isDisliked = false;
+
+const toggleLike = () =>{
+	const likeBtn = document.getElementById('likeBtn');
+	const likeCount = document.getElementById('likeCount');
+	if(isLiked){
+		likeBtn.classList.remove('like');
+		likeCount.textContent = parseInt(likeCount.textContent) + 1;
+	}else{
+		isLiked = true;
+		if(isDisliked){
+			isDisliked = false;
+			document.getElementById('dislikeBtn').classList.remove('dislike');
+			document.getElementById('dislikeCount').textContent = parseInt(document.getElementById('dislikeCount').textContent) - 1;
+		}
+		likeBtn.classList.add('like');
+		likeCount.textContent = parseInt(likeCount.textContent) + 1;
+	}
+}
+
+const toggleDislike = () =>{
+	const dislikeBtn = document.getElementById('dislikeBtn');
+	const dislikeCount = document.getElementById('dislikeCount');
+	if(isDisliked){
+		dislikeBtn.classList.remove('dislike');
+		dislikeCount.textContent = parseInt(dislikeCount.textContent) +1;
+	}else{
+		isDisliked = true;
+		if(isLiked){
+			isLiked = false;
+			document.getElementById('likeBtn').classList.remove('like');
+			document.getElementById('likeCount').textContent = parseInt(document.getElementById('likeCount').textContent) - 1;
+		}
+		dislikeBtn.classList.add('dislike');
+		dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+	}
+}
+
+document.getElementById('likeBtn').addEventListener('click', toggleLike);
+document.getElementById('dislikeBtn').addEventListener('click', toggleDislike);
+

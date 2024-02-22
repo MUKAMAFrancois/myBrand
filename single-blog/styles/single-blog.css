@@ -201,6 +201,31 @@ nav ul li a{
     width: 30px;
     height: 30px;
 }
+.box_of_likes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.fa-regular{
+    font-size: 30px;
+    cursor: pointer;
+}
+.like{
+    color: var(--buttons_color);
+    font-weight: 900;
+}
+.dislike{
+    color: #000;
+    font-weight: 900;
+}
 
 
 .read-similar-blogs{

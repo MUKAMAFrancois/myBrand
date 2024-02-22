@@ -77,8 +77,20 @@
                         <p id="comment">0</p>
                     </div>
                     <div class="stat">
-                        <img src="./images/icons/likes-icon.svg" alt="">
-                        <p>1.3K</p>
+                        <!-- <img  class="added-likes"  src="./images/icons/likes-icon.svg" alt="">
+                        <p>1.3K</p> -->
+
+
+                        <div class="box_of_likes">
+                            <div class="icons">
+                                <i  id="likeBtn" class="fa-regular fa-heart"></i>
+                                <span class="like" id="likeCount">0</span>
+                            </div>
+                            <div class="icons">
+                                <i  id="dislikeBtn" class="fa-regular fa-thumbs-down"></i>
+                                <span class="dislike" id="dislikeCount">0</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -323,8 +335,8 @@
                 <img src="./images/comment_imgs/user1.png" alt="">
                 <div class="commenting-content">
                     <div class="your-name">
-                        <h4>Your Name:</h4>
-                        <input type="text" value="" placeholder="Your Name" class="user">
+                        <h4>Your Email</h4>
+                        <input type="email" value="" placeholder="Your Email" class="user" id="commented_email">
                     </div>
                     <div class="commentinput">
                         <input type="text" placeholder="Enter comment" class="usercomment">

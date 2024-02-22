@@ -54,6 +54,11 @@ body{
 nav h1{
 width: fit-content;
 }
+.menu-list-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 nav ul li{
@@ -86,6 +91,10 @@ nav ul li a:hover::after{
 
 nav h2 span{
     color:#bcfd4c;
+}
+.signIn-link{
+    height: 40px;
+
 }
 
 .signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo,.signOut-link{
