@@ -242,3 +242,48 @@ previousBtn.addEventListener('click', () => {
 
 
 /* =========	LIKES=========== */
+
+
+
+let isLiked = false;
+let isDisliked = false;
+
+const toggleLike = () =>{
+	const likeBtn = document.getElementById('likeBtn');
+	const likeCount = document.getElementById('likeCount');
+	if(isLiked){
+		likeBtn.classList.remove('like');
+		likeCount.textContent = parseInt(likeCount.textContent) + 1;
+	}else{
+		isLiked = true;
+		if(isDisliked){
+			isDisliked = false;
+			document.getElementById('dislikeBtn').classList.remove('dislike');
+			document.getElementById('dislikeCount').textContent = parseInt(document.getElementById('dislikeCount').textContent) - 1;
+		}
+		likeBtn.classList.add('like');
+		likeCount.textContent = parseInt(likeCount.textContent) + 1;
+	}
+}
+
+const toggleDislike = () =>{
+	const dislikeBtn = document.getElementById('dislikeBtn');
+	const dislikeCount = document.getElementById('dislikeCount');
+	if(isDisliked){
+		dislikeBtn.classList.remove('dislike');
+		dislikeCount.textContent = parseInt(dislikeCount.textContent) +1;
+	}else{
+		isDisliked = true;
+		if(isLiked){
+			isLiked = false;
+			document.getElementById('likeBtn').classList.remove('like');
+			document.getElementById('likeCount').textContent = parseInt(document.getElementById('likeCount').textContent) - 1;
+		}
+		dislikeBtn.classList.add('dislike');
+		dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+	}
+}
+
+document.getElementById('likeBtn').addEventListener('click', toggleLike);
+document.getElementById('dislikeBtn').addEventListener('click', toggleDislike);
+
