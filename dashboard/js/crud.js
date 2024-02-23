@@ -114,37 +114,38 @@ document.querySelector('.post-btn').addEventListener('click', createBlog);
 
 
 function editBlog(id) {
-    alert(id);
-    // const updateBlogForm = document.querySelector('.update-blog-form');
-    // updateBlogForm.style.display = "block";
-    // document.querySelector('.filter-add').style.display = "none";
-    // let existingData = blog_data.find(record => record.id === id);
-    // document.getElementById('update_title').value = existingData.title;
-    // document.getElementById('update_content').value = existingData.content;
-    // document.getElementById('update_type').value = existingData.type;
-    // document.getElementById('update_datepicker').value = existingData.date;
-    // document.getElementById('update_image').value = existingData.image;
-    // document.getElementById('update_id').value = existingData.id;
+    // alert(id);
+    const updateBlogForm = document.querySelector('.update-blog-form');
+    updateBlogForm.style.display = "block";
+    document.querySelector('.filter-add').style.display = "none";
+    document.querySelector('.add-new-blog-form').style.display="none";
+    let existingData = blog_data.find(record => record.id === id);
+    document.getElementById('update_title').value = existingData.title;
+    document.getElementById('update_content').value = existingData.content;
+    document.getElementById('update_type').value = existingData.type;
+    document.getElementById('update_datepicker').value = existingData.date;
+    // let fileInput = document.getElementById('update_image');
+    // let file = new File([existingData.image], existingData.title, { type: existingData.image.type });
+    // fileInput.files = new DataTransfer().add(file);
+    document.getElementById('update_id').value = existingData.id;
 }
 
 
-
 function updateBlog(){
-    let id = parseInt(document.getElementById('id').value);
+    let id = parseInt(document.getElementById('update_id').value);
     let title=document.querySelector('#update_title').value;
     let content=document.querySelector('#update_content').value;
     let type=document.querySelector('#update_type').value;
     let date=document.querySelector('#update_datepicker').value;
-    let image=document.querySelector('#update_image').value;
+    // let image=document.querySelector('#update_image').files[0];
     let index = blog_data.findIndex(record => record.id === id);
     document.querySelector('.update-blog-form').style.display = "none";
     blog_data[index].title = title; 
     blog_data[index].content = content; 
     blog_data[index].type = type; 
     blog_data[index].date = date; 
-    blog_data[index].image = image; 
+    // blog_data[index].image = image; 
     readBlogs();
-
 }
 
 document.querySelector('.save_updates_btn').addEventListener('click',updateBlog);
