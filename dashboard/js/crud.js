@@ -114,23 +114,19 @@ document.querySelector('.post-btn').addEventListener('click', createBlog);
 
 
 function editBlog(id) {
-    const updateBlogForm = document.querySelector('.update-blog-form');
-    if (updateBlogForm) {
-        updateBlogForm.style.display = "block";
-        document.querySelector('.filter-add').style.display = "none";
-        let existingData = blog_data.find(record => record.id === id);
-        document.getElementById('update_title').value = existingData.title;
-        document.getElementById('update_content').value = existingData.content;
-        document.getElementById('update_type').value = existingData.type;
-        document.getElementById('update_datepicker').value = existingData.date;
-        document.getElementById('update_image').value = existingData.image;
-        document.getElementById('id').value = existingData.id;
-    } else {
-        console.error("Error: Update blog form not found.");
-    }
+    alert(id);
+    // const updateBlogForm = document.querySelector('.update-blog-form');
+    // updateBlogForm.style.display = "block";
+    // document.querySelector('.filter-add').style.display = "none";
+    // let existingData = blog_data.find(record => record.id === id);
+    // document.getElementById('update_title').value = existingData.title;
+    // document.getElementById('update_content').value = existingData.content;
+    // document.getElementById('update_type').value = existingData.type;
+    // document.getElementById('update_datepicker').value = existingData.date;
+    // document.getElementById('update_image').value = existingData.image;
+    // document.getElementById('update_id').value = existingData.id;
 }
 
-document.querySelector('.edit-single-blog').addEventListener('click',editBlog);
 
 
 function updateBlog(){

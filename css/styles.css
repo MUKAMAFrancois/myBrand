@@ -228,6 +228,11 @@ nav h2 span{
     justify-content: space-between;
     color:#fff;
 }
+.about_me_description{
+    font-family:'Inknut Antiqua';
+    line-height: 32px;
+
+}
 
 .hire-getCV{
     display: flex;

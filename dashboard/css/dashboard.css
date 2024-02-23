@@ -273,13 +273,31 @@ a:focus{
     position: relative;
 }
 
-.add-new-blog-form,.login-container{
+.login-container{
 
     flex-basis:65%;
     position: relative;
     width:600px;
     top:120px;
+    left:200px;
+    bottom:50px;
+    background-color: #fff;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+
+}
+
+.add-new-blog-form{
+    flex-basis:65%;
+    position: relative;
+    width:600px;
+    top:120px;
     left:10px;
+    bottom:50px;
     background-color: #fff;
     padding:20px 30px;
     display: flex;
@@ -666,7 +684,7 @@ th, td {
 
 .filter-add{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 20px;
     margin-top:30px;
     align-items: center;
