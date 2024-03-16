@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+body{   
+    font-family: 'Inknut Antiqua', sans-serif;
+   
+   
+  
+}
+._all_blogs{
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+.single-blog{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.6s;
+    color:#fff;
+    height: auto;
+}
+.single-blog:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.single-blog img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.single-blog .blog-details{
+    padding:3px 12px;
+}
+.blog-details p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.blog-details h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+}
+.comments-datePublish {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 14px;
+    color: #000;
+}
+
+.next-previous{
+    display: flex;
+    margin-top:20px;
+    
+}
+.next-previous a{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+.next-previous a:hover{
+    background-color: #fff;
+    color: #000;
+}
