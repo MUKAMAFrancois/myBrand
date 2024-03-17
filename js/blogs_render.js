@@ -11,7 +11,7 @@ const renderBlogs = async () => {
                 <img src="${blog.imageURL}" alt="">
                 <div class="blog-details">
                     <h3>${blog.title}</h3>
-                    <p>${(blog.content).slice(0,80)}<a href="../single-blog/readblog.html/?id=${blog._id}">Read More</a>
+                    <p>${(blog.content).slice(0,80)}<a href="../single-blog/readblog.html?id=${blog._id}" class="read-full-blog">Read More</a>
                     </p>
                     <div class="comments-datePublish">
                         <div> <i class="fa-solid fa-message"></i><span style="font-weight: bold; color:#333;">${blog.comments.length}</span></div>
@@ -22,25 +22,19 @@ const renderBlogs = async () => {
             `;
         });
         document.querySelector('.blog-list').innerHTML = blog_card;
+
+        // Add event listeners after all blog posts have been added to the DOM
+        document.querySelectorAll('.read-full-blog').forEach(item => {
+            item.addEventListener('click', function (event){
+                event.preventDefault();
+                window.location.href = this.href;
+            });
+        });
+        
     } catch (error) {
         console.log(error);
     }
 }
 
 document.addEventListener('DOMContentLoaded', renderBlogs);
-
-
-// view Blog by Id
-
-// const viewBlog = async (id) => {
-//     try {
-//         const response = await fetch(`${blogs_url}/${id}`);
-//         const blog = await response.json();
-//         console.log(blog);
-//         localStorage.setItem('blog', JSON.stringify(blog));
-//         window.location.href = './single-blog/readblog.html';
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
 
