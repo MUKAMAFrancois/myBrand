@@ -33,6 +33,8 @@ const handleSignUp =  async (event) =>{
         } 
         }catch (error) { 
         console.log(error);
+    } finally {
+        document.getElementById('preloader').style.display = 'none';
     }
 }
 
@@ -107,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#signup').addEventListener('submit', e => {
         e.preventDefault();
         signup_validation();
+        document.getElementById('preloader').style.display = 'block';
 
         // Check if all fields are valid before sending the registration request
         const allFieldsValid = [
@@ -118,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (allFieldsValid) {
             handleSignUp(e);
+            
         }
     });
 });

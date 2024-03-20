@@ -514,9 +514,66 @@ nav ul li a{
 
 
 /* =====comment==== */
+.signIn-link{
+    height: 40px;
+    color: #000;
+    background: #bcfd4c;
+    text-decoration: none;
+    padding: 3px 20px;
+    border-radius: 30px;
+    border:none;
+    transition: transform 0.6s;
+
+}
+.signIn-link:hover{
+    background: #fff;
+    color: #000;
+    transform: scale(1.07);
+}
+
+.signIn-link a{
+    color: #000;
+    font-family: 'Inknut Antiqua', serif;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: block;
+}
+
+.signIn-link a:hover{
+    color: #000;
+}
+.signOut-link{
+    color: #000;
+    background: #F24E1E;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-family: 'Inknut Antiqua', serif;
+    border:none;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+.signOut-link:hover{
+    background: #fff;
+    border: 1px solid #F24E1E;
+    color: #000;
+    transform: scale(1.03);
+}
 
 .write-comment{
     width: 58%;
+    margin-top:70px;
+    padding: 0 28px;
+}
+.write-comment small{
+    font-family: 'Inknut Antiqua',serif;
+    color:#fff;
+    background-color: #5c0303;
+    font-size: 18px;
+    font-weight: 900;
+
 }
 .write-comment h2{
     font-family: 'Inknut Antiqua',serif;

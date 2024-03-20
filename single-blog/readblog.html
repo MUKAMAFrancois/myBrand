@@ -7,12 +7,8 @@
     <title>Single Blog</title>
     <link rel="stylesheet" href="./styles/single-blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/pre_loader.css">
 </head>
-<style>
-    .render-single-blog{
-        background-color: #770505;
-    }
-</style>
 <body>
     <header>
         <nav>
@@ -30,7 +26,8 @@
                 </li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href="../login.html" class="signIn">Sign In</a></li> 
+                <button class="signIn-link"> <a href="../signup.html" >Sign In</a></button>
+                <button class="signOut-link"  style="display:none"> Sign out</button>
                 <i onclick="hideMenu()" class="fa-regular fa-circle-xmark"></i>
             </ul>
             <i  onclick="showMenu()" class="fa-solid fa-bars"></i>
@@ -40,113 +37,13 @@
 
 
     <main>
+        <div id="preloader"></div>
       <div class="left-right">
         <section class="left-section-blog">
-    <div class="render-single-blog">
-            <div class="title-blog">
-                <h1>The Ultimate History of South Sudan</h1>
-                <div class="author-date">
-                    <p>By: Jim Aurels</p>
-                    <div class="calendar">
-                        <img src="./images/icons/time-icon.svg" alt="">
-                        <p>Aug 8, 2023</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="read-full-blog">
-                <img src="./images/ssudan.jpg" alt="" class="image-of-blog">
-                <div class="blog-content">
-                    Lorem ipsum, dolor sit amet consectetur
-                     adipisicing elit. Impedit quae aperiam quo,
-                      quis architecto nesciunt dolore. Assumenda repudiandae
-                       repellat maiores laudantium sunt commodi consectetur ad 
-                       quos doloremque sapiente. Placeat reprehenderit pariatur, 
-                       repudiandae autem quisquam sint, laudantium cumque numquam
-                        voluptatibus odio ullam necessitatibus similique minus aspernatur omnis,
-                         molestias exercitationem. Tenetur aperiam
-                     eos illo nulla asperiores obcaecati deleniti cumque nihil iure non.
-
-                     Lorem ipsum dolor sit amet 
-                     consectetur adipisicing elit. 
-                     Autem error delectus assumenda at 
-                     itaque temporibus earum dicta natus 
-                     aliquid. Mollitia?
-                </div>
-
-                <div class="statistics">
-                    <div class="stat">
-                        <img src="./images/icons/views-icon.svg" alt="">
-                        <p>123K</p>
-                    </div>
-                    <div class="stat">
-                        <img src="./images/icons/comment-icon.svg" alt="">
-                        <p id="comment">0</p>
-                    </div>
-                    <div class="stat">
-                        <div class="box_of_likes">
-                            <div class="icons">
-                                <i  id="likeBtn" class="fa-regular fa-heart"></i>
-                                <span class="like" id="likeCount">0</span>
-                            </div>
-                            <div class="icons">
-                                <i  id="dislikeBtn" class="fa-regular fa-thumbs-down"></i>
-                                <span class="dislike" id="dislikeCount">0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-    </div>
-                    <div class="read-similar-blogs">
-                        <div id="data-container">
-                            <h3>Blogs of the same Author</h3>
-                            <div class="card-container ">
-                                <a href="" class="card">
-                                    <img src="./images/increase.jpeg" alt="">
-                                    <div class="card-content">
-                                        <h3>National GDP in 2025</h3>
-                                        <div class="time-author">
-                                            <p>By: Ela Johnson</p>
-                                            <div class="time">
-                                                <img src="./images/icons/time-icon.svg" alt="">
-                                                <p>11 May, 2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="" class="card">
-                                    <img src="./images/increase.jpeg" alt="">
-                                    <div class="card-content">
-                                        <h3>National GDP in 2025</h3>
-                                        <div class="time-author">
-                                            <p>By: Ela Johnson</p>
-                                            <div class="time">
-                                                <img src="./images/icons/time-icon.svg" alt="">
-                                                <p>11 May, 2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                
-                            </div>
-                        </div>
-                     
-                        <div class="pagination" id="pagination"> 
-                            <a href="#" id="prev">Previous</a> 
-                            <a href="#" class="page-link" data-page="1">1</a> 
-                            <a href="#" class="page-link" data-page="2">2</a> 
-                            <a href="#" class="page-link" data-page="3">3</a> 
-                            <a href="#" id="next">Next</a> 
-                            <p id="page-numbers"> </p> 
-                        </div> 
-                    </div>
-                 
-                  
-                
-    </div>
         </section>
+
+
         <section class="right-section-latest-blogs">
             <div class="search-container">
                 <input type="text" placeholder="Search a Blog" id="search-recent-blog">
@@ -158,7 +55,7 @@
                     <img src="./images/houselamps.jpeg" alt="">
                     <div class="summary">
                         <p class="blog-type">Philosophy</p>
-                        <h2>Best Team of Year</h2>
+                        <h2>Seven wonders of the world</h2>
                         <div class="author-date">
                             <p>By: Jim Aurels</p>
                             <div class="calendar">
@@ -167,7 +64,8 @@
                             </div>
                         </div>
                     </div>
-                </a> -->
+                </a>
+        -->
     
                     <div class="next-previous">
                         <button class="previous-btn">Previous</button>
@@ -188,36 +86,31 @@
 
 
         <section class="write-comment">
+            <small class="error"></small>
             <h2>Leave your Comment!</h2>
          
             <div class="commentbox">
                 <img src="./images/comment_imgs/user1.png" alt="">
                 <div class="commenting-content">
-                    <div class="your-name">
-                        <h4>Your Email</h4>
-                        <input type="email" value="" placeholder="Your Email" class="user" id="commented_email">
-                    </div>
                     <div class="commentinput">
-                        <input type="text" placeholder="Enter comment" class="usercomment">
+                        <input type="text" placeholder="Enter comment" class="usercomment" id="comment-input">
                         <div class="buttons">
-                            <button type="submit" disabled id="publish">Comment</button>
+                            <button type="submit" id="publish">Comment</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="comments">
+
                 <!-- <div class="single-commented">
                     <img src="./images/comment_imgs/user1.png" alt="">
                     <div class="written-comment">
                         <h4>John Doe</h4>
-                        <p>Lorem ipsum dolor sit amet. <br> <span id="comment-date">12-04-2023</span></p>
-                        <div class="comment-actions">
-                            <div class="likes">Likes <span>0</span></div>
-                            <div class="dislikes">Dislikes <span>0</span></div>
-                        </div>
+                        <p>Lorem ipsum dolor sit amet. <br> <span id="comment-date">Commented on: 12-04-2023</span></p>
                     </div>
                 </div> -->
             </div>
+
         </section>
 
 
@@ -264,7 +157,11 @@
     
 
     <script src="./js/single-blog.js"></script>
-    <script src="./js/single-blog-render-rest.js"></script>
+    <script src="./js/single-blog-render.js"></script>
+    <script src="./js/post_comment.js"></script>
+    <script src="../js/auth/logout.js"></script>
+    <script src="../js/auth/login_status.js"></script>
+   
 
 </body>
 </html>

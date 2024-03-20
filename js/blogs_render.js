@@ -1,5 +1,5 @@
 let blog_card = "";
-const blogs_url = 'https://mukamabrand202.onrender.com/blogs';
+const blogs_url = 'https://mukamadeployts.onrender.com/blogs';
 
 const renderBlogs = async () => {
     try {
@@ -22,6 +22,7 @@ const renderBlogs = async () => {
             `;
         });
         document.querySelector('.blog-list').innerHTML = blog_card;
+       
 
         // Add event listeners after all blog posts have been added to the DOM
         document.querySelectorAll('.read-full-blog').forEach(item => {
@@ -29,8 +30,7 @@ const renderBlogs = async () => {
                 event.preventDefault();
                 window.location.href = this.href;
             });
-        });
-        
+        });  
     } catch (error) {
         console.log(error);
     }

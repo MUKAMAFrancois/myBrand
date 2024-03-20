@@ -62,20 +62,32 @@ const handleLogin = async (e) => {
                 },
                 body: JSON.stringify({ email: loginEmail, password: loginPassword })
             });
+                if(!response.ok){
+                    const message = `An error has occured: ${response.status}`;
+                    throw new Error(message);
+                }
             const data = await response.json();
-            const withBearer = 'Bearer ' + data.token;
-            const isAdmin = data.user.userRole === 'admin';
-
-            sessionStorage.setItem('isAdmin', isAdmin);
             sessionStorage.setItem('user', JSON.stringify(data.user));
-            sessionStorage.setItem('token', withBearer);
-            if (data.token) { // Check if token exists
-                alert('Login successful');
+            
+            if( data.token && data.user.userRole === 'admin'){
+                const adminToken = data.token;
+                sessionStorage.setItem('adminToken', `Bearer ${adminToken}`);
+                window.location.href = 'http://127.0.0.1:5503/dashboard/addNewBlog.html';
+            } 
+             
+            
+
+            if (data.token && data.user.userRole === 'user') { 
+                const token = data.token;
+                sessionStorage.setItem('token', `Bearer ${token}`);
                 window.location.href = '../index.html';
+               
             }
         
         } catch (error) {
             console.log(error);
+        }finally {
+            document.getElementById('preloader').style.display = 'none';
         }
     }
 }
@@ -86,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .addEventListener('submit', e =>{
         e.preventDefault();
         login_validation();
+        document.getElementById('preloader').style.display = 'block';
         
         const allFieldsValid =[
             login_email.parentElement.querySelector('small').classList.contains('success'),

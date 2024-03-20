@@ -15,6 +15,9 @@ function handleLogout() {
             if (response.status === 200) {
                 // Clear token from sessionStorage
                 sessionStorage.removeItem('token');
+                sessionStorage.removeItem('adminToken');
+                sessionStorage.removeItem('user');
+
                 window.location.href = './login.html';
             } else {
                 console.error('Logout failed');

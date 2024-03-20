@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateLoginStatus() {
         const token = sessionStorage.getItem('token');
-        if (token) {
+        const adminToken = sessionStorage.getItem('adminToken');
+        if (token || adminToken) {
             // If token exists, hide Sign In button and show Sign Out button
             document.querySelector('.signIn-link').style.display = 'none';
             document.querySelector('.signOut-link').style.display = 'block';

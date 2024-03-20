@@ -182,8 +182,29 @@ a:focus{
 
 
 /* ===========Add New Blog========== */
+.warning-message {
+    color: #8b0707;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 700;
+    font-family: 'Inknut Antiqua', serif;
+}
 
+.back_{
+    position: absolute;
+    right: -30px;
+    top:-30px;
+    cursor: pointer;
+}
 
+.back_ i{
+    font-size: 42px;
+    background-color: #fe4e1e;
+    color:#fff;
+    border-radius: 20px;
+}
 .right-section-add-blog{
     flex-basis: 65%;
 }
@@ -307,9 +328,7 @@ a:focus{
     color:#000;
 
 }
-.add-new-blog-form{
-    display: none;
-}
+
 
 .written-blogs-list{
 
