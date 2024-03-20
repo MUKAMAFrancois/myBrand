@@ -96,8 +96,28 @@ nav h2 span{
     height: 40px;
 
 }
+.signOut-link{
+    color: #000;
+    background: #F24E1E;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-family: 'Inknut Antiqua', serif;
+    border:none;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+.signOut-link:hover{
+    background: #fff;
+    border: 1px solid #F24E1E;
+    color: #000;
+    transform: scale(1.03);
+}
 
-.signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo,.signOut-link{
+
+.signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
     color: #000;
     background: #bcfd4c;
     text-decoration: none;
@@ -106,7 +126,7 @@ nav h2 span{
     border:none;
     transition: transform 0.6s;
 }
-.signIn-link a,.more-on-me-link a,.hire-me-btn a,.more-skills-link a,.see-more-portifo a,.signOut-link a{
+.signIn-link a,.more-on-me-link a,.hire-me-btn a,.more-skills-link a,.see-more-portifo a{
     color: #000;
     font-family: 'Inknut Antiqua', serif;
     text-decoration: none;
@@ -115,13 +135,13 @@ nav h2 span{
   
 }
 
-.signIn-link:hover,.more-on-me-link:hover,.hire-me-btn:hover,.more-skills-link:hover,.see-more-portifo:hover,.signOut-link:hover{
+.signIn-link:hover,.more-on-me-link:hover,.hire-me-btn:hover,.more-skills-link:hover,.see-more-portifo:hover{
     background: #fff;
     color: #000;
     transform: scale(1.07);
 }
 
-.signIn-link a:hover,.more-on-me-link a:hover,.hire-me-btn a:hover,.more-skills-link a:hover,.see-more-portifo a:hover,.signOut-link a:hover{
+.signIn-link a:hover,.more-on-me-link a:hover,.hire-me-btn a:hover,.more-skills-link a:hover,.see-more-portifo a:hover{
     color: #000;
 }
 
