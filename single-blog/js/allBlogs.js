@@ -13,7 +13,7 @@ const renderBlogs = async () => {
                 <img src="${blog.imageURL}" alt="">
                 <div class="blog-details">
                     <h3>${blog.title}</h3>
-                    <p>${(blog.content).slice(0,80)}<a href="http://127.0.0.1:5503/single-blog/readblog.html?id=${blog._id}" class="read-full-blog">Read More</a>
+                    <p>${(blog.content).slice(0,80)}<a href="https://mybrand2024.netlify.app/single-blog/readblog.html?id=${blog._id}" class="read-full-blog">Read More</a>
                     </p>
                     <div class="comments-datePublish">
                         <div> <i class="fa-solid fa-message"></i><span style="font-weight: bold; color:#333;">${blog.comments.length}</span></div>
