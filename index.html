@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/pre_loader.css">
     
 
 </head>
@@ -265,11 +266,8 @@
             <h1><hr>Contact <span>Me</span></h1>
             <div class="contact-details">
                 <p>Leave a comment, I will get back to you in a second.</p>
+                <div id="preloader"></div>
                 <form action="" method="post" id="contact-form">
-                    <input type="text" name="your_name" id="your_name_contact" placeholder="Your Name" >
-                    <small class="error_message" id="your_name_error"></small>
-                    <input type="email" name="your_email" id="your_email_contact" placeholder="Email">
-                    <small class="error_message" id="your_email_error"></small>
                     <textarea name="your_message" id="your_message_contact" cols="30" rows="10" placeholder="Message"></textarea>
                     <small class="error_message" id="your_message_error"></small>
                     <button type="submit" class="send-message-btn">Send Message</button>
@@ -347,6 +345,8 @@
 <script src="./js/blogs_render.js"></script>
 <script src="./js/auth/login_status.js"></script>
 <script src="./js/auth/logout.js"></script>
+
+<script src="./js/sendMessage.js"></script>
     
 </body>
 </html>

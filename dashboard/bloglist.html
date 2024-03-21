@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="../css/pre_loader.css">
 </head>
-<body onload="list_blogs_dashboard()">
+<body>
     <main>
         <section class="left-section">
             <h1>Dashboard</h1>
@@ -102,7 +102,7 @@
             <div class="blog-list-add-update-container">
 
 
-                    <form action="" class="add-new-blog-form" method="post" style="display: none;">
+                    <form action="" class="add-new-blog-form"  style="display: none;">
                         <div class="back_"><i class="fa-solid fa-circle-xmark"></i></div>
                         <h2>Create New Blog</h2>
                         <div id="preloader"></div>
@@ -129,33 +129,19 @@
                     </form>
 
                     
-                <form action="" class="update-blog-form">
+                <form action="" class="update-blog-form" method="post">
+                    <div class="back_update"><i class="fa-solid fa-circle-xmark"></i></div>
                         <h2>Update</h2>
-                        <input type="text" name="update_id" id="update_id" hidden>
                         <div class="input-update-container">
                             <label for="title" class="label">Title:</label>
                             <input type="text" name="title" id="update_title">
                         </div>
 
                         <div class="input-update-container">
-                            <label for="type" class="label">Type:</label>
-                            <select name="type" id="update_type">
-                                <option value="type1">ICT</option>
-                                <option value="type2">Sciences</option>
-                                <option value="type3">Tourism</option>
-                            </select>
+                            <label for="image" class="label">Image URL:</label>
+                            <input type="text" name="image" id="update_image">
                         </div>
 
-                        <div class="input-update-container">
-                            <label for="image" class="label">Image:</label>
-                            <input type="file" name="image" id="update_image">
-                        </div>
-
-                        
-                        <div class="input-update-container">
-                            <label for="datepicker" class="label">Date:</label>
-                            <input type="date" id="update_datepicker" name="update_datepicker" value="" min="2024-01-01" max="2030-12-31">
-                        </div>
                         <div class="input-update-container">
                             <label for="content" class="label">Content:</label>
                             <textarea name="content" id="update_content" cols="30" rows="10"></textarea>
@@ -164,7 +150,10 @@
                         <button class="save_updates_btn" type="button">Save</button>
                 
                 </form>
+
+
                     <div class="written-blogs-list">
+                        
                         
                         <!-- <div class="single-edit-blog">
                             <div class="single-blog">
