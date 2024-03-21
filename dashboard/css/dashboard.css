@@ -782,6 +782,16 @@ th, td {
     
     }
 
+    .notifications{
+        left:90px;
+        width:300px;
+        top:-70px;
+        
+    }
+    .notifications-container{
+        width:300px;
+    }
+
 
 *{
     font-size: 14px;
@@ -909,6 +919,17 @@ th, td {
     border:none;
     transition: transform 0.6s;
     cursor: pointer;
+}
+
+.notifications{
+    left:200px;
+    width:700px;
+    top:-70px;
+    margin-top:250px;
+    
+}
+.notifications-container{
+    width:600px;
 }
    
 }
