@@ -72,7 +72,7 @@ const handleLogin = async (e) => {
             if( data.token && data.user.userRole === 'admin'){
                 const adminToken = data.token;
                 sessionStorage.setItem('adminToken', `Bearer ${adminToken}`);
-                window.location.href = 'http://127.0.0.1:5503/dashboard/addNewBlog.html';
+                window.location.href = '../dashboard/addNewBlog.html';
             } 
              
             

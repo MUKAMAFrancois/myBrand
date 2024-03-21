@@ -120,7 +120,7 @@ function post_blog() {
         .then(data => {
             document.getElementById('preloader').style.display = 'none';
             console.log('Success:', data);
-            window.location.href = "http://127.0.0.1:5503/dashboard/bloglist.html";
+            window.location.href = "../dashboard/bloglist.html";
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -186,7 +186,7 @@ const update_blog = async (blogId) => {
             const data = await updateResponse.json();
             console.log('Success:', data);
            // document.getElementById('preloader').style.display = 'none';
-            window.location.href = "http://127.0.0.1:5503/dashboard/bloglist.html";
+            window.location.href = "../dashboard/bloglist.html";
            
         } catch(error){
            // document.getElementById('preloader').style.display = 'none';
