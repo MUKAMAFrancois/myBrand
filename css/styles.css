@@ -58,6 +58,7 @@ width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -191,7 +192,7 @@ nav h2 span{
 
 .intro-career span{
     color:#bcfd4c;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 700;
     white-space: nowrap;
 }
@@ -770,6 +771,19 @@ nav .fa-solid{
 }
 @media only screen and (max-width: 900px){
 
+
+    .menu-list-top {
+        width: 100%; /* Take up full width */
+        height: auto; /* Allow for content to expand vertically */
+        flex-direction: column; /* Stack items vertically */
+        padding-top: 0; /* Remove top padding */
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    .menu-list-top li {
+        margin: 4px 0; 
+    }
+
     nav .fa-regular, nav .fa-solid{
         display: block;
         font-size: 24px;
@@ -838,7 +852,8 @@ nav .fa-solid{
         margin-bottom: 40px;
     }
    .intro-career span{
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 20px;
    }
     .more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
         padding: 3px 10px;
@@ -1002,6 +1017,21 @@ nav .fa-solid{
 
 @media only screen and (min-width: 901px) and (max-width: 1024px) {
 
+    .menu-list-top {
+        width: 100%; /* Take up full width */
+        height: auto; /* Allow for content to expand vertically */
+        flex-direction: column; /* Stack items vertically */
+        padding-top: 0; /* Remove top padding */
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    .menu-list-top li {
+        margin: 4px 0; 
+    }
+
+
+
+
     nav .fa-regular, nav .fa-solid{
         display: block;
         font-size: 24px;
@@ -1070,7 +1100,7 @@ nav .fa-solid{
 
 
    .intro-career span{
-    font-size: 32px;
+    font-size: 28px;
     position: relative;
    }
 

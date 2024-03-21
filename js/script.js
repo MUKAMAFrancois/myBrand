@@ -10,7 +10,3 @@ function openMenu(){
     topMenu.style.right="0";
 
 }
-
-function closeMenu(){
-    topMenu.style.right="-220px";
-}

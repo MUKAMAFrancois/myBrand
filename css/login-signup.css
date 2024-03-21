@@ -223,8 +223,11 @@ small {
 /* ==========================Responsiveness=========================================== */
 
 @media (max-width: 768px){
-    .login-container{
-        width: 90%;
+    .login-container,.other-login-options{
+        width: 80%;
+    }
+    .other-login-options{
+        margin:0 auto;
     }
     .login-container h1{
         font-size: 25px;
