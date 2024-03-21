@@ -106,6 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ].every(field => field);
         if(allFieldsValid){
             handleLogin(e);
+           
         }
     });
 });
+
+
+
